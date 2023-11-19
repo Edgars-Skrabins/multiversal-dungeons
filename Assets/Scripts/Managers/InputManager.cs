@@ -1,13 +1,15 @@
-
 using MultiversalDungeons.Utilities;
+using Unity.Plastic.Newtonsoft.Json.Serialization;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class InputManager : Singleton<InputManager>
 {
+    public event Action OnShootPerformed;
 
     private InputActions m_inputActions;
-    private InputAction m_playerMovementInputAction;
+    private InputAction m_playerMovementIA;
+    private InputAction m_playerShootIA;
 
     protected override void Awake()
     {
@@ -30,13 +32,28 @@ public class InputManager : Singleton<InputManager>
     private void InitializeInputActions()
     {
         m_inputActions = new InputActions();
-        m_playerMovementInputAction = m_inputActions.Player.Movement;
-        m_playerMovementInputAction.Enable();
+
+        m_playerMovementIA = m_inputActions.Player.Movement;
+        m_playerMovementIA.Enable();
+
+        m_playerShootIA = m_inputActions.Player.Shoot;
+        m_playerShootIA.Enable();
     }
 
     private void InitializeInputEvents()
     {
-        
+        m_playerShootIA.performed += Interact_Action;
+    }
+
+    private void Interact_Action(InputAction.CallbackContext _inputObj)
+    {
+        switch(_inputObj.phase)
+        {
+            case InputActionPhase.Performed:
+                OnShootPerformed?.Invoke();
+                break;
+            default: return;
+        }
     }
 
     public Vector3 GetWorldMousePosition()
@@ -47,7 +64,7 @@ public class InputManager : Singleton<InputManager>
 
     public Vector2 GetMovementVector2Normalized()
     {
-        Vector2 movement = m_playerMovementInputAction.ReadValue<Vector2>();
+        Vector2 movement = m_playerMovementIA.ReadValue<Vector2>();
         return movement;
     }
 }
