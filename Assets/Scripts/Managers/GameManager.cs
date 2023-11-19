@@ -1,4 +1,5 @@
 using UnityEngine;
+using MultiversalDungeons.Utilities;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -11,6 +12,7 @@ public class GameManager : Singleton<GameManager>
     private void Start()
     {
         InitializeGame();
+        Utilities.Initialize();
     }
 
     private void InitializeGame()

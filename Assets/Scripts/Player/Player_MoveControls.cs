@@ -1,18 +1,34 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Player_MoveControls : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    [SerializeField] private Player_Stats m_playerStatsCS;
+
+    private Rigidbody2D m_playerRB;
+
+    private void Awake()
     {
-        
+        InitializeReferences();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void InitializeReferences()
     {
-        
+        m_playerStatsCS = GetComponent<Player_Stats>();
+        m_playerRB = m_playerStatsCS.m_playerRB;
+    }
+
+    private void Update()
+    {
+        MovePlayer();
+    }
+
+    private void MovePlayer()
+    {
+        Vector2 movement = InputManager.I.GetMovementVector2Normalized();
+        m_playerRB.velocity = movement * m_playerStatsCS.m_playerMoveSpeed;
     }
 }
