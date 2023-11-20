@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Level_01_Jungle/Level_01_Jungle.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/MainMenu/MainMenu.unity
+    guid: f83918afb9ca9454baebb3d3b7880f4d
+  - enabled: 1
+    path: Assets/Scenes/Augie.unity
+    guid: 74d22b4ca1a04eb419818b93291d5a13
   m_configObjects: {}
