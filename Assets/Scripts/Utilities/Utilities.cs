@@ -4,7 +4,6 @@ namespace MultiversalDungeons.Utilities
 {
     public static class Utilities
     {
-
         public static Camera GameCamera;
 
         public static void Initialize()

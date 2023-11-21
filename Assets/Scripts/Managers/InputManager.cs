@@ -5,11 +5,16 @@ using UnityEngine.InputSystem;
 
 public class InputManager : Singleton<InputManager>
 {
-    public event Action OnShootPerformed;
-
     private InputActions m_inputActions;
+    
+    // Input events
+    public event Action OnShootPerformed;
+    public event Action OnInteractPerformed;
+    
+    // Input actions
     private InputAction m_playerMovementIA;
     private InputAction m_playerShootIA;
+    private InputAction m_playerInteractIA;
 
     protected override void Awake()
     {
@@ -38,19 +43,35 @@ public class InputManager : Singleton<InputManager>
 
         m_playerShootIA = m_inputActions.Player.Shoot;
         m_playerShootIA.Enable();
+
+        m_playerInteractIA = m_inputActions.Player.Interact;
+        m_playerInteractIA.Enable();
     }
 
     private void InitializeInputEvents()
     {
-        m_playerShootIA.performed += Interact_Action;
+        m_playerShootIA.performed += Shoot_Action;
+        m_playerInteractIA.performed += Interact_Action;
     }
 
-    private void Interact_Action(InputAction.CallbackContext _inputObj)
+    private void Shoot_Action(InputAction.CallbackContext _inputCtx)
     {
-        switch(_inputObj.phase)
+        switch(_inputCtx.phase)
         {
             case InputActionPhase.Performed:
                 OnShootPerformed?.Invoke();
+                break;
+            default: return;
+        }
+
+    }
+
+    private void Interact_Action(InputAction.CallbackContext _inputCtx)
+    {
+        switch(_inputCtx.phase)
+        {
+            case InputActionPhase.Performed:
+                OnInteractPerformed?.Invoke();
                 break;
             default: return;
         }
