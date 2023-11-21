@@ -2,12 +2,16 @@ using UnityEngine;
 
 public abstract class Weapon : MonoBehaviour
 {
-
     [Header("Weapon Settings")]
     [Space(5)]
     [SerializeField] protected float m_fireRateInSeconds;
     [SerializeField] protected Transform[] m_shootLocations;
+
     [Space(5)]
+    [Header("Weapon VFX")]
+    [Space(5)]
+    [SerializeField] protected GameObject m_shotVFX;
+    [SerializeField] protected Transform[] m_shotVFXLocations;
     
     protected float m_fireRateTimer;
     protected bool m_fireRateZero;
@@ -16,7 +20,12 @@ public abstract class Weapon : MonoBehaviour
     {
         SusbcribeToInputEvents();
     }
-    
+
+    protected void Update()
+    {
+        CountFireRateTimer();
+    }
+
     protected virtual void HandleShoot()
     {
         if(CanShoot()) Shoot();
@@ -25,6 +34,21 @@ public abstract class Weapon : MonoBehaviour
     protected virtual void Shoot()
     {
         ResetFireRateTimer();
+        SpawnShotVFX();
+    }
+
+    protected virtual void SpawnShotVFX()
+    {
+        if(!m_shotVFX)
+        {
+            Debug.LogError("Weapon is missing Shot VFX!");
+            return;
+        }
+        
+        foreach(var tf in m_shotVFXLocations)
+        {
+            Instantiate(m_shotVFX, tf.position, tf.rotation);
+        }
     }
 
     protected virtual bool CanShoot()
@@ -47,10 +71,8 @@ public abstract class Weapon : MonoBehaviour
         {
             m_fireRateTimer -= Time.deltaTime;
         }
-        else
-        {
-            m_fireRateZero = true;
-        }
+
+        m_fireRateZero = m_fireRateTimer <= 0 ? m_fireRateZero = true : m_fireRateZero = false;
     }
 
     protected virtual void ResetFireRateTimer()

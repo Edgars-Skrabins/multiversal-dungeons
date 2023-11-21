@@ -658,10 +658,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3342520395716376761}
+  - component: {fileID: 6373955041670192617}
   - component: {fileID: 8054692651505727567}
   - component: {fileID: 4200087304847277667}
   - component: {fileID: 6317546940303301528}
   - component: {fileID: 2244271748087315884}
+  - component: {fileID: 7328467997244260316}
   - component: {fileID: 1996558838294673692}
   - component: {fileID: 798317709502443158}
   m_Layer: 3
@@ -690,6 +692,27 @@ Transform:
   - {fileID: 5430562469361747464}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &6373955041670192617
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8705688402533886784}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ce8216b50681e8044a7328feb688ede6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &8054692651505727567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -716,6 +739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 885463f5fd8bffc42a9b78f333943d23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_playerAnimator: {fileID: 6373955041670192617}
 --- !u!114 &6317546940303301528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -741,6 +765,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_playerStatsCS: {fileID: 8054692651505727567}
+--- !u!114 &7328467997244260316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8705688402533886784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95955cab77b0501449a46e7de840ea06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1996558838294673692
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,5 +1,5 @@
-using UnityEngine;
 using MultiversalDungeons.Utilities;
+using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
