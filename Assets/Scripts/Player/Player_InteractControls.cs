@@ -13,4 +13,16 @@ public class Player_InteractControls : MonoBehaviour
     {
         
     }
+
+    /*
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("Entered Trigger");
+        if (other.tag == "Portal")
+        {
+            Debug.Log("Entered Portal");
+            GoToNextRoom();
+        }
+    }
+    */
 }
