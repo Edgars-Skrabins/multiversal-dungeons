@@ -94,4 +94,5 @@ public abstract class Weapon : MonoBehaviour
     {
         UnSusbcribeFromInputEvents();
     }
+
 }

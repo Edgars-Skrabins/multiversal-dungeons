@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class Player_MoveControls : MonoBehaviour
 {
-
     [SerializeField] private Player_Stats m_playerStatsCS;
 
     private Rigidbody2D m_playerRB;
@@ -28,4 +27,5 @@ public class Player_MoveControls : MonoBehaviour
         Vector2 movement = InputManager.I.GetMovementVector2Normalized();
         m_playerRB.velocity = movement * m_playerStatsCS.m_playerMoveSpeed;
     }
+
 }
