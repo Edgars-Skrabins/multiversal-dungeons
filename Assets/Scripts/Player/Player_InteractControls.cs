@@ -28,8 +28,11 @@ public class Player_InteractControls : MonoBehaviour
     private void HandleInteract()
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(m_interactOriginTF.position, m_interactRange, m_interactLayer);
-
-        foreach(var col in colliders)
+        Debug.Log("colliders:: " + colliders);
+       
+        // save lowest distance object
+        float _distance = m_interactRange;
+        foreach (Collider2D col in colliders)
         {
             if(!col.TryGetComponent(out IInteractable interactable)) continue;
 
@@ -39,7 +42,14 @@ public class Player_InteractControls : MonoBehaviour
             }
             else
             {
+
                 // TODO: Check distances between interactables and set the closest one to be the interacted object
+                float _currentDistance = Vector2.Distance (transform.position, m_currentInteractTF.position);
+                if (_currentDistance < _distance)
+                {
+                    _distance = _currentDistance;
+                    m_currentInteractable.Interact();
+                }
             }
         }
 
