@@ -1,4 +1,3 @@
-using JetBrains.Annotations;
 using UnityEngine;
 
 public class Player_InteractControls : MonoBehaviour
@@ -8,8 +7,8 @@ public class Player_InteractControls : MonoBehaviour
     [SerializeField] private LayerMask m_interactLayer;
 
     private float m_distanceBetweenPlayerAndInteractObj;
-    [CanBeNull] private Transform m_currentInteractTF;
-    [CanBeNull] private IInteractable m_currentInteractable;
+    private Transform m_currentInteractTF;
+    private IInteractable m_currentInteractable;
 
     private void Start()
     {
@@ -30,30 +29,55 @@ public class Player_InteractControls : MonoBehaviour
     {
         // TODO: Convert to non alloc version of OverlapCircleAll
         Collider2D[] colliders = Physics2D.OverlapCircleAll(m_interactOriginTF.position, m_interactRange, m_interactLayer);
-       
-        // save lowest distance object
-        // float _distance = m_interactRange;
-        foreach (Collider2D col in colliders)
-        {
-            if(!col.TryGetComponent(out IInteractable interactable)) continue;
 
-            if(m_currentInteractable == null)
+        float closestDistance = Mathf.Infinity;
+        Transform nearestTF = null;
+
+        if (colliders.Length > 0)
+        {
+            foreach (Collider2D col in colliders)
             {
-                SetInteractable(col.GetComponent<Transform>(),interactable);
+                float distance = Vector2.Distance(transform.position, col.transform.position);
+
+                if (distance < closestDistance)
+                {
+                    closestDistance = distance;
+                    nearestTF = col.transform;
+                }
             }
-            else
+
+            if (nearestTF.TryGetComponent(out IInteractable interactable))
             {
-                // TODO: Check distances between interactables and set the closest one to be the interacted object
-                // float _currentDistance = Vector2.Distance (transform.position, m_currentInteractTF.position);
-                // if (_currentDistance < _distance)
-                // {
-                //     _distance = _currentDistance;
-                //     m_currentInteractable.Interact();
-                // }
+                SetInteractable(nearestTF, interactable);
             }
         }
+        if(m_currentInteractTF && ObjectOutOfRange(m_currentInteractTF))
+        {
+            ClearInteractable();
+        }
 
-        if(m_distanceBetweenPlayerAndInteractObj > m_interactRange) ClearInteractable();
+        //foreach (Collider2D col in colliders)
+        //{
+        //    
+        //    if(!col.TryGetComponent(out IInteractable interactable)) continue;
+        //
+        //    if(m_currentInteractable == null)
+        //    {
+        //        SetInteractable(col.transform,interactable);
+        //    }
+        //    else
+        //    {
+        // TODO: Check distances between interactables and set the closest one to be the interacted object
+        //        // float _currentDistance = Vector2.Distance (transform.position, m_currentInteractTF.position);
+        //        // if (_currentDistance < _distance)
+        //        // {
+        //        //     _distance = _currentDistance;
+        //        //     m_currentInteractable.Interact();
+        //        // }
+        //    }
+        //}
+
+        //if(m_distanceBetweenPlayerAndInteractObj > m_interactRange) ClearInteractable();
     }
 
     private void SetInteractable(Transform _interactableTF, IInteractable _interactableI)
@@ -77,5 +101,16 @@ public class Player_InteractControls : MonoBehaviour
     private void Interact()
     {
         m_currentInteractable?.Interact();
+    }
+
+    private bool ObjectOutOfRange(Transform _objectToCheck)
+    {
+        float distance = Vector2.Distance(transform.position, _objectToCheck.position);
+        if (distance > m_interactRange)
+        {
+            return true;
+        }
+
+        return false;
     }
 }
