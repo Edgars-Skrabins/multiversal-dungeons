@@ -1,4 +1,4 @@
-public class Weapon_Projectile : Weapon
+public abstract class Weapon_Projectile : Weapon
 {
     
 }

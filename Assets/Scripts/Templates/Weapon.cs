@@ -61,6 +61,7 @@ public abstract class Weapon : MonoBehaviour
         foreach(Transform tf in m_shootLocations)
         {
             // TODO: Make the logic for checking if fire location obstructed
+            return true;
         }
         return false;
     }

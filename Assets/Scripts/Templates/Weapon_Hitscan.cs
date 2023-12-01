@@ -1,5 +1,6 @@
-public class Weapon_Hitscan : Weapon
+public abstract class Weapon_Hitscan : Weapon
 {
-    
-    
+
+
+
 }

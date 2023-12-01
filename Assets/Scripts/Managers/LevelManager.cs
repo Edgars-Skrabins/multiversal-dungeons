@@ -1,51 +1,51 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
+    [SerializeField] private GameObject[] m_rooms;
+    [SerializeField] private GameObject m_portal;
+    [SerializeField] private bool m_defeatedAllEnemies;
 
-    [SerializeField] GameObject[] _rooms;
-    [SerializeField] GameObject _portal;
-    [SerializeField] bool _defeatedAllEnemies = false;
-    private bool _roomCompleted = false;
+    private bool _roomCompleted;
     private GameObject _currentRoom;
     private int _currentRoomIndex;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
+    {
+        InitializeRooms();
+    }
+
+    private void InitializeRooms()
     {
         _currentRoomIndex = 0;
-        _currentRoom = _rooms[_currentRoomIndex].gameObject;
+        _currentRoom = m_rooms[_currentRoomIndex].gameObject;
         _currentRoom.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (_defeatedAllEnemies)
+        if (m_defeatedAllEnemies)
         {
             AfterDefeatAllEnemies();
         }
-        
     }
 
     private void AfterDefeatAllEnemies()
     {
-        _defeatedAllEnemies = false;
+        m_defeatedAllEnemies = false;
         _roomCompleted = true;
         CreatePortal();
     }
 
     private void CreatePortal()
     {
-        Instantiate(_portal);
+        Instantiate(m_portal);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D _other)
     {
         Debug.Log("Entered Trigger");
-        if (other.tag == "Portal")
+        if (_other.tag == "Portal")
         {
             Debug.Log("Entered Portal");
             GoToNextRoom();
@@ -57,9 +57,8 @@ public class LevelManager : MonoBehaviour
         _roomCompleted = false;
         _currentRoom.SetActive(false);
         _currentRoomIndex += 1;
-        _currentRoom = _rooms[_currentRoomIndex].gameObject;
+        _currentRoom = m_rooms[_currentRoomIndex].gameObject;
         _currentRoom.SetActive(true);
     }
 
-    
 }

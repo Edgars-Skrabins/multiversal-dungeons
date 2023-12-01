@@ -12,11 +12,11 @@ public class Player_WeaponManager : MonoBehaviour
     }
 
     public Weapon[] m_Weapons;
-    
-     [HideInInspector] public string m_currentWeaponName;
 
-     // TODO: All this crap below
-     
+    [HideInInspector] public string m_currentWeaponName;
+
+    // TODO: All this crap below
+
     // protected void Awake()
     // {
     //     m_currentWeaponName = m_Weapons[0].m_weaponName;
@@ -114,5 +114,5 @@ public class Player_WeaponManager : MonoBehaviour
     //     return m_Weapons[rand].m_weaponName;
     //
     // }
-    
+    //
 }
