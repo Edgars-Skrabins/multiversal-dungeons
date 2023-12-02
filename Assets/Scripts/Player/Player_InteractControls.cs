@@ -9,9 +9,11 @@ public class Player_InteractControls : MonoBehaviour
     private float m_distanceBetweenPlayerAndInteractObj;
     private Transform m_currentInteractTF;
     private IInteractable m_currentInteractable;
+    private Player_Stats m_playerStatsCS;
 
     private void Start()
     {
+        m_playerStatsCS = GetComponent<Player_Stats>();
         InitializeInputs();
     }
 
@@ -77,7 +79,7 @@ public class Player_InteractControls : MonoBehaviour
 
     private void Interact()
     {
-        m_currentInteractable?.Interact();
+        m_currentInteractable?.Interact(m_playerStatsCS);
     }
 
     private bool ObjectOutOfRange(Transform _objectToCheck)

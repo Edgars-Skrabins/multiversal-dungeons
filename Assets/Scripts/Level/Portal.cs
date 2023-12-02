@@ -14,7 +14,7 @@ public class Portal : MonoBehaviour, IInteractable
         
     }
 
-    public void Interact()
+    public void Interact(Player_Stats _playerStatsCS)
     {
         Debug.Log("interact with portal");
     }

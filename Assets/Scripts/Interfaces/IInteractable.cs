@@ -1,7 +1,7 @@
 public interface IInteractable
 {
 
-    public void Interact();
+    public void Interact(Player_Stats _playerStatsCS);
 
     public void InteractGFXOn();
 
