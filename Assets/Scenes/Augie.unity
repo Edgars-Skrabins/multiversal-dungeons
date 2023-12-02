@@ -4841,11 +4841,27 @@ PrefabInstance:
     m_TransformParent: {fileID: 1611953628}
     m_Modifications:
     - target: {fileID: 3798204584615246417, guid: dffe53a8ccdc3456292c83b4afbbd564, type: 3}
+      propertyPath: m_portal
+      value: 
+      objectReference: {fileID: 3432831298727695078, guid: 5a34288415e204e4bbad15a6b9b49804, type: 3}
+    - target: {fileID: 3798204584615246417, guid: dffe53a8ccdc3456292c83b4afbbd564, type: 3}
+      propertyPath: m_rooms.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798204584615246417, guid: dffe53a8ccdc3456292c83b4afbbd564, type: 3}
       propertyPath: _rooms.Array.data[0]
       value: 
       objectReference: {fileID: 672223191}
     - target: {fileID: 3798204584615246417, guid: dffe53a8ccdc3456292c83b4afbbd564, type: 3}
       propertyPath: _rooms.Array.data[1]
+      value: 
+      objectReference: {fileID: 819470072}
+    - target: {fileID: 3798204584615246417, guid: dffe53a8ccdc3456292c83b4afbbd564, type: 3}
+      propertyPath: m_rooms.Array.data[0]
+      value: 
+      objectReference: {fileID: 672223191}
+    - target: {fileID: 3798204584615246417, guid: dffe53a8ccdc3456292c83b4afbbd564, type: 3}
+      propertyPath: m_rooms.Array.data[1]
       value: 
       objectReference: {fileID: 819470072}
     - target: {fileID: 6351158651220462044, guid: dffe53a8ccdc3456292c83b4afbbd564, type: 3}
