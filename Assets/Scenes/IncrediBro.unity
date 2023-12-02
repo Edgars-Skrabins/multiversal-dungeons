@@ -6742,6 +6742,10 @@ PrefabInstance:
       propertyPath: m_WeaponName
       value: Dart Shooter
       objectReference: {fileID: 0}
+    - target: {fileID: 18623760742129826, guid: 9b27478502d3042c3b5f76d06c2c9da7, type: 3}
+      propertyPath: m_weaponName
+      value: Dart Shooter
+      objectReference: {fileID: 0}
     - target: {fileID: 400043090867319207, guid: 9b27478502d3042c3b5f76d06c2c9da7, type: 3}
       propertyPath: m_Color.b
       value: 0.21092917
@@ -6760,11 +6764,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7960946244046807995, guid: 9b27478502d3042c3b5f76d06c2c9da7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.82
+      value: 4.69
       objectReference: {fileID: 0}
     - target: {fileID: 7960946244046807995, guid: 9b27478502d3042c3b5f76d06c2c9da7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.28
+      value: 2.2
       objectReference: {fileID: 0}
     - target: {fileID: 7960946244046807995, guid: 9b27478502d3042c3b5f76d06c2c9da7, type: 3}
       propertyPath: m_LocalPosition.z

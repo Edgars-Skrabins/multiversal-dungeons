@@ -55,29 +55,6 @@ public class Player_InteractControls : MonoBehaviour
         {
             ClearInteractable();
         }
-
-        //foreach (Collider2D col in colliders)
-        //{
-        //    
-        //    if(!col.TryGetComponent(out IInteractable interactable)) continue;
-        //
-        //    if(m_currentInteractable == null)
-        //    {
-        //        SetInteractable(col.transform,interactable);
-        //    }
-        //    else
-        //    {
-        // TODO: Check distances between interactables and set the closest one to be the interacted object
-        //        // float _currentDistance = Vector2.Distance (transform.position, m_currentInteractTF.position);
-        //        // if (_currentDistance < _distance)
-        //        // {
-        //        //     _distance = _currentDistance;
-        //        //     m_currentInteractable.Interact();
-        //        // }
-        //    }
-        //}
-
-        //if(m_distanceBetweenPlayerAndInteractObj > m_interactRange) ClearInteractable();
     }
 
     private void SetInteractable(Transform _interactableTF, IInteractable _interactableI)

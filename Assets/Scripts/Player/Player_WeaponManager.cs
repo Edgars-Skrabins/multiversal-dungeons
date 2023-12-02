@@ -15,12 +15,10 @@ public class Player_WeaponManager : MonoBehaviour
 
     [HideInInspector] public string m_currentWeaponName;
 
-    // TODO: All this crap below
-
      protected void Awake()
      {
-         m_currentWeaponName = m_Weapons[0].m_WeaponName;
-         EquipWeapon(m_currentWeaponName);
+         //m_currentWeaponName = m_Weapons[0].m_WeaponName;
+         //EquipWeapon(m_currentWeaponName);
      }
     
      public void EquipWeapon(string _weaponName)
@@ -38,6 +36,9 @@ public class Player_WeaponManager : MonoBehaviour
                  weapon.m_WeaponGO.SetActive(false);
              }
          }
+
+        Debug.Log("Equipepd Weapon:" + m_currentWeaponName);
+
      }
     
      [ContextMenu("EquipRandomWeapon")]
@@ -68,8 +69,8 @@ public class Player_WeaponManager : MonoBehaviour
     
     
          EquipWeapon(m_Weapons[rand].m_WeaponName);
-    
-     }
+        Debug.Log("Equipepd Random Weapon:" + m_Weapons[rand].m_WeaponName);
+    }
     
     //public void ShowNextWeaponIcon(string _weaponName)
     //{
