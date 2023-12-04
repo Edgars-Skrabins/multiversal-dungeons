@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class RoomManager : MonoBehaviour
 {
-    [SerializeField] Transform[] _enemySpawnPoints;
-    [SerializeField] Transform _portalSpawnPoint;
+    public Transform m_PortalSpawnPoint;
+    public Transform[] m_EnemySpawnPoints;
 
     // Start is called before the first frame update
     void Start()

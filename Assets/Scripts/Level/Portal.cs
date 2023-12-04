@@ -2,21 +2,18 @@ using UnityEngine;
 
 public class Portal : MonoBehaviour, IInteractable
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void Interact(Player_Stats _playerStatsCS)
     {
-        Debug.Log("interact with portal");
+        // Load next room in scene
+        GameObject _levelManager = GameObject.Find("LevelManager");
+        if (_levelManager != null)
+        {
+            _levelManager.GetComponent<LevelManager>().GoToNextRoom();
+        }
+        else
+        {
+            Debug.Log("Level Manager is null you fuck");
+        }
     }
 
     public void InteractGFXOn()
