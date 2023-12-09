@@ -10,8 +10,6 @@ public abstract class Weapon_Hitscan : Weapon
 
     protected override void Shoot()
     {
-        // TODO: Shoot raycast towards mouse position, the calculation is probably wrong cause it uses Vector3 to Vector2 conversions
-
         Vector2 mousePosition = InputManager.I.GetWorldMousePosition();
         Vector2 playerToMouse = mousePosition - (Vector2)m_playerStatsCS.m_playerTF.position;
 
