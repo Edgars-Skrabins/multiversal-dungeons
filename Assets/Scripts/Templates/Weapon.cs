@@ -21,7 +21,7 @@ public abstract class Weapon : MonoBehaviour
         SusbcribeToInputEvents();
     }
 
-    protected void Update()
+    protected virtual void Update()
     {
         CountFireRateTimer();
     }

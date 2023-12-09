@@ -33,7 +33,6 @@ public class LevelManager : MonoBehaviour
 
     private void AfterDefeatAllEnemies()
     {
-        m_defeatedAllEnemies = false;
         _roomCompleted = true;
         CreatePortal();
     }
@@ -48,6 +47,7 @@ public class LevelManager : MonoBehaviour
 
     public void GoToNextRoom()
     {
+        m_defeatedAllEnemies = false;
         _roomCompleted = false;
         _currentRoom.SetActive(false);
 
