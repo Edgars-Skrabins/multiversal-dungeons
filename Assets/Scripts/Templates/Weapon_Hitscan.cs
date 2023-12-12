@@ -1,4 +1,3 @@
-using MultiversalDungeons.Utilities;
 using UnityEngine;
 
 public abstract class Weapon_Hitscan : Weapon
