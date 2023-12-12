@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: MainCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 3243287200134035478, guid: 838db29415f63354aa7b7c6c2bad2143, type: 3}
+      propertyPath: m_Name
+      value: Sprite Renderer
+      objectReference: {fileID: 0}
     - target: {fileID: 3342520395716376761, guid: 838db29415f63354aa7b7c6c2bad2143, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -52,6 +56,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3812439845101007045, guid: 838db29415f63354aa7b7c6c2bad2143, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5430562469361747464, guid: 838db29415f63354aa7b7c6c2bad2143, type: 3}
       propertyPath: m_LocalPosition.z
       value: -10
@@ -71,6 +79,18 @@ PrefabInstance:
     - target: {fileID: 8091988101701189097, guid: 838db29415f63354aa7b7c6c2bad2143, type: 3}
       propertyPath: m_BackGroundColor.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8167032541316884775, guid: 838db29415f63354aa7b7c6c2bad2143, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8167032541316884775, guid: 838db29415f63354aa7b7c6c2bad2143, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8167032541316884775, guid: 838db29415f63354aa7b7c6c2bad2143, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8705688402533886784, guid: 838db29415f63354aa7b7c6c2bad2143, type: 3}
       propertyPath: m_Name
