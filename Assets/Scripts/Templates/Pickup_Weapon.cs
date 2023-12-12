@@ -10,8 +10,8 @@ public class Pickup_Weapon : Pickup
     protected override void PickUpItem(Player_Stats _playerStatsCS)
     {
         if(m_weaponName == "")
-            _playerStatsCS.m_playerWM.EquipWeapon(_playerStatsCS.m_playerWM.GetRandomWeaponName());
+            _playerStatsCS.m_weaponManagerCS.EquipWeapon(_playerStatsCS.m_weaponManagerCS.GetRandomWeaponName());
         else
-            _playerStatsCS.m_playerWM.EquipWeapon(m_weaponName);
+            _playerStatsCS.m_weaponManagerCS.EquipWeapon(m_weaponName);
     }
 }
