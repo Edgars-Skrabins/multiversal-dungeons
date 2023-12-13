@@ -45,7 +45,7 @@ public class Enemy_Movement : MonoBehaviour
         m_enemyAgent.SetDestination(Vector3.zero);
     }
 
-    bool IsPlayerInDetectionRadius()
+    private bool IsPlayerInDetectionRadius()
     {
         float distance = Vector2.Distance(transform.position, GameManager.I.GetPlayerTransform().position);
         if (distance > m_enemyStatsCS.m_enemyRange)

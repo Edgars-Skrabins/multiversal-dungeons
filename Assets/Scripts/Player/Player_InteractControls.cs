@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Player_InteractControls : MonoBehaviour
@@ -29,13 +30,12 @@ public class Player_InteractControls : MonoBehaviour
 
     private void HandleInteract()
     {
-        // TODO: Convert to non alloc version of OverlapCircleAll
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(m_interactOriginTF.position, m_interactRange, m_interactLayer);
-
+        List<Collider2D> colliders = new List<Collider2D>();
+        Physics2D.OverlapCircleNonAlloc(m_interactOriginTF.position, m_interactRange, colliders.ToArray());
         float closestDistance = Mathf.Infinity;
         Transform nearestTF = null;
 
-        if (colliders.Length > 0)
+        if (colliders.Count > 0)
         {
             foreach (Collider2D col in colliders)
             {
