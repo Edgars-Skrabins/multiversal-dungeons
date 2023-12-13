@@ -8,6 +8,7 @@ public class Player_AnimationController : MonoBehaviour
     private void Update()
     {
         SetFacingDirection();
+        SetSpeed();
     }
 
     void SetFacingDirection()

@@ -585,15 +585,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Placeholder Sprites - Enter the Gungeon - The Convict_6
+      name: Placeholder Sprites - Walk DownRight 0
       rect:
         serializedVersion: 2
         x: 572
         y: 628
         width: 16
         height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -606,15 +606,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Placeholder Sprites - Enter the Gungeon - The Convict_7
+      name: Placeholder Sprites - Walk DownRight 1
       rect:
         serializedVersion: 2
         x: 590
         y: 628
         width: 16
         height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -627,15 +627,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Placeholder Sprites - Enter the Gungeon - The Convict_8
+      name: Placeholder Sprites - Walk DownRight 2
       rect:
         serializedVersion: 2
         x: 608
         y: 628
         width: 15
         height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -648,15 +648,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Placeholder Sprites - Enter the Gungeon - The Convict_9
+      name: Placeholder Sprites - Walk DownRight 3
       rect:
         serializedVersion: 2
         x: 626
         y: 628
         width: 15
         height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -669,15 +669,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Placeholder Sprites - Enter the Gungeon - The Convict_10
+      name: Placeholder Sprites - Walk DownRight 4
       rect:
         serializedVersion: 2
         x: 643
         y: 628
         width: 16
         height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -690,15 +690,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Placeholder Sprites - Enter the Gungeon - The Convict_11
+      name: Placeholder Sprites - Walk DownRight 5
       rect:
         serializedVersion: 2
         x: 661
         y: 628
         width: 15
         height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -711,7 +711,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Placeholder Sprites - Enter the Gungeon - The Convict_12
+      name: Placeholder Sprites - Walk Up 0
       rect:
         serializedVersion: 2
         x: 571
@@ -732,15 +732,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Placeholder Sprites - Enter the Gungeon - The Convict_13
+      name: Placeholder Sprites - Walk Up 1
       rect:
         serializedVersion: 2
         x: 588
         y: 600
         width: 16
         height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -753,15 +753,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Placeholder Sprites - Enter the Gungeon - The Convict_14
+      name: Placeholder Sprites - Walk Up 2
       rect:
         serializedVersion: 2
         x: 606
         y: 600
         width: 16
         height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -774,15 +774,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Placeholder Sprites - Enter the Gungeon - The Convict_15
+      name: Placeholder Sprites - Walk Up 3
       rect:
         serializedVersion: 2
         x: 624
         y: 600
         width: 14
         height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -795,15 +795,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Placeholder Sprites - Enter the Gungeon - The Convict_16
+      name: Placeholder Sprites - Walk Up 4
       rect:
         serializedVersion: 2
         x: 640
         y: 600
         width: 16
         height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -816,15 +816,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Placeholder Sprites - Enter the Gungeon - The Convict_17
+      name: Placeholder Sprites - Walk Up 5
       rect:
         serializedVersion: 2
         x: 658
         y: 600
         width: 16
         height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -837,7 +837,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Placeholder Sprites - Enter the Gungeon - The Convict_18
+      name: Placeholder Sprites - Walk UpRight 0
       rect:
         serializedVersion: 2
         x: 572
@@ -858,7 +858,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Placeholder Sprites - Enter the Gungeon - The Convict_19
+      name: Placeholder Sprites - Walk UpRight 1
       rect:
         serializedVersion: 2
         x: 589
@@ -879,7 +879,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Placeholder Sprites - Enter the Gungeon - The Convict_20
+      name: Placeholder Sprites - Walk UpRight 2
       rect:
         serializedVersion: 2
         x: 606
@@ -900,7 +900,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Placeholder Sprites - Enter the Gungeon - The Convict_21
+      name: Placeholder Sprites - Walk UpRight 3
       rect:
         serializedVersion: 2
         x: 623
@@ -921,7 +921,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Placeholder Sprites - Enter the Gungeon - The Convict_22
+      name: Placeholder Sprites - Walk UpRight 4
       rect:
         serializedVersion: 2
         x: 639
@@ -942,7 +942,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Placeholder Sprites - Enter the Gungeon - The Convict_23
+      name: Placeholder Sprites - Walk UpRight 5
       rect:
         serializedVersion: 2
         x: 656
@@ -973,24 +973,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Placeholder Sprites - Enter the Gungeon - The Convict_10: -1211080005
-      Placeholder Sprites - Enter the Gungeon - The Convict_11: 1360157614
-      Placeholder Sprites - Enter the Gungeon - The Convict_12: -1073897476
-      Placeholder Sprites - Enter the Gungeon - The Convict_13: 347000947
-      Placeholder Sprites - Enter the Gungeon - The Convict_14: -1593114631
-      Placeholder Sprites - Enter the Gungeon - The Convict_15: -350997032
-      Placeholder Sprites - Enter the Gungeon - The Convict_16: 492749706
-      Placeholder Sprites - Enter the Gungeon - The Convict_17: -1658844825
-      Placeholder Sprites - Enter the Gungeon - The Convict_18: -1086414567
-      Placeholder Sprites - Enter the Gungeon - The Convict_19: 1525525085
-      Placeholder Sprites - Enter the Gungeon - The Convict_20: 130245955
-      Placeholder Sprites - Enter the Gungeon - The Convict_21: -1168399623
-      Placeholder Sprites - Enter the Gungeon - The Convict_22: 162911547
-      Placeholder Sprites - Enter the Gungeon - The Convict_23: 634772053
-      Placeholder Sprites - Enter the Gungeon - The Convict_6: 1293350327
-      Placeholder Sprites - Enter the Gungeon - The Convict_7: -371286202
-      Placeholder Sprites - Enter the Gungeon - The Convict_8: -570888022
-      Placeholder Sprites - Enter the Gungeon - The Convict_9: -588771363
       Placeholder Sprites - Idle Down 0: -305693412
       Placeholder Sprites - Idle Down 1: 1163142298
       Placeholder Sprites - Idle Down 2: -1357438446
@@ -1013,6 +995,24 @@ TextureImporter:
       Placeholder Sprites - Walk Down 3: 634772053
       Placeholder Sprites - Walk Down 4: 957625256
       Placeholder Sprites - Walk Down 5: 891924553
+      Placeholder Sprites - Walk DownRight 0: 1253886266
+      Placeholder Sprites - Walk DownRight 1: 1293350327
+      Placeholder Sprites - Walk DownRight 2: -371286202
+      Placeholder Sprites - Walk DownRight 3: -570888022
+      Placeholder Sprites - Walk DownRight 4: -1814473368
+      Placeholder Sprites - Walk DownRight 5: -1211080005
+      Placeholder Sprites - Walk Up 0: 1360157614
+      Placeholder Sprites - Walk Up 1: -1073897476
+      Placeholder Sprites - Walk Up 2: 347000947
+      Placeholder Sprites - Walk Up 3: -1593114631
+      Placeholder Sprites - Walk Up 4: -350997032
+      Placeholder Sprites - Walk Up 5: 492749706
+      Placeholder Sprites - Walk UpRight 0: -1658844825
+      Placeholder Sprites - Walk UpRight 1: -1086414567
+      Placeholder Sprites - Walk UpRight 2: -467306614
+      Placeholder Sprites - Walk UpRight 3: 130245955
+      Placeholder Sprites - Walk UpRight 4: -1168399623
+      Placeholder Sprites - Walk UpRight 5: 162911547
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
