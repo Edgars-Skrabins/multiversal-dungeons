@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 2187155877321170317}
   - component: {fileID: 98897447468777115}
   - component: {fileID: 3354374049029352890}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Portal
   m_TagString: Portal
   m_Icon: {fileID: 0}

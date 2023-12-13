@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3058335700626188792}
   - component: {fileID: 1722524211971807943}
-  - component: {fileID: 8001531882900666708}
   m_Layer: 0
   m_Name: Magic Staff
   m_TagString: Untagged
@@ -85,19 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8001531882900666708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 234697122524361291}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5df181034ffd646eb9e6eea77ea2eddf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_weaponName: 
 --- !u!1 &517582274642991411
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,8 +453,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7636286531090068185}
   - component: {fileID: 148127685659599045}
-  - component: {fileID: 558822919408480704}
-  - component: {fileID: 6201412828681607352}
   m_Layer: 0
   m_Name: Dart Shooter
   m_TagString: Untagged
@@ -543,37 +527,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &558822919408480704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2433081524967859849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5df181034ffd646eb9e6eea77ea2eddf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_weaponName: 
---- !u!114 &6201412828681607352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2433081524967859849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ade429cb9e24841b2928c60e96775688, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_playerStatsCS: {fileID: 0}
-  m_fireRateInSeconds: 0
-  m_shootLocations: []
-  m_shotVFX: {fileID: 0}
-  m_shotVFXLocations: []
-  m_bulletProjectilePrefabs: []
 --- !u!1 &2723986521337170544
 GameObject:
   m_ObjectHideFlags: 0
@@ -1179,7 +1132,7 @@ Transform:
   m_GameObject: {fileID: 8691480295115849203}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1360,7 +1313,7 @@ MonoBehaviour:
   m_interactRange: 1
   m_interactLayer:
     serializedVersion: 2
-    m_Bits: 2039
+    m_Bits: 0
 --- !u!50 &798317709502443158
 Rigidbody2D:
   serializedVersion: 4

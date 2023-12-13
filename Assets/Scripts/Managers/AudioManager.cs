@@ -1,7 +1,8 @@
 using UnityEngine;
 
-public class AudioManager : MonoBehaviour
+public class AudioManager : Singleton<AudioManager>
 {
+    [SerializeField] private ObjectPoolManager.ObjectPool pool;
     //Audio Manager should be able to
     //TODO: store sounds easily
     //TODO: Play the specific sounds without hassle from anywhere

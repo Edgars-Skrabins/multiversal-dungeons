@@ -7,7 +7,6 @@ public class Player_InteractControls : MonoBehaviour
     [SerializeField] private float m_interactRange;
     [SerializeField] private LayerMask m_interactLayer;
 
-    private float m_distanceBetweenPlayerAndInteractObj;
     private Transform m_currentInteractTF;
     private IInteractable m_currentInteractable;
     private Player_Stats m_playerStatsCS;
@@ -30,29 +29,28 @@ public class Player_InteractControls : MonoBehaviour
 
     private void HandleInteract()
     {
-        List<Collider2D> colliders = new List<Collider2D>();
-        Physics2D.OverlapCircleNonAlloc(m_interactOriginTF.position, m_interactRange, colliders.ToArray());
+        Collider2D[] colliders = new Collider2D[10];
+        int colliderCount =  Physics2D.OverlapCircleNonAlloc(m_interactOriginTF.position, m_interactRange, colliders,m_interactLayer);
+
+
         float closestDistance = Mathf.Infinity;
         Transform nearestTF = null;
 
-        if (colliders.Count > 0)
+        for (int i = 0; i < colliderCount; i++)
         {
-            foreach (Collider2D col in colliders)
-            {
-                float distance = Vector2.Distance(transform.position, col.transform.position);
+            float distance = Vector2.Distance(transform.position, colliders[i].transform.position);
 
-                if (distance < closestDistance)
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                nearestTF = colliders[i].transform;
+                if (nearestTF.TryGetComponent(out IInteractable interactable))
                 {
-                    closestDistance = distance;
-                    nearestTF = col.transform;
+                    SetInteractable(nearestTF, interactable);
                 }
             }
-
-            if (nearestTF.TryGetComponent(out IInteractable interactable))
-            {
-                SetInteractable(nearestTF, interactable);
-            }
         }
+
         if(m_currentInteractTF && ObjectOutOfRange(m_currentInteractTF))
         {
             ClearInteractable();

@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: MainCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 2332071915782367805, guid: 838db29415f63354aa7b7c6c2bad2143, type: 3}
+      propertyPath: m_interactLayer.m_Bits
+      value: 2048
+      objectReference: {fileID: 0}
     - target: {fileID: 3243287200134035478, guid: 838db29415f63354aa7b7c6c2bad2143, type: 3}
       propertyPath: m_Name
       value: Sprite Renderer

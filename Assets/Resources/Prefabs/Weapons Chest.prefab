@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6756698611813705332}
   - component: {fileID: 7040442921533175901}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 5432529388387132330}
   - component: {fileID: 18623760742129826}
   - component: {fileID: 6653600909572589147}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Weapons Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
