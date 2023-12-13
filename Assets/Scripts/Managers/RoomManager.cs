@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class RoomManager : MonoBehaviour
 {
+    public Transform m_PlayerSpawnPoint;
     public Transform m_PortalSpawnPoint;
     public Transform[] m_EnemySpawnPoints;
 

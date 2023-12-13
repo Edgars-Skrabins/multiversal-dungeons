@@ -5,7 +5,6 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private GameObject[] m_rooms;
     [SerializeField] private GameObject m_portal;
     [SerializeField] private bool m_defeatedAllEnemies;
-    [SerializeField] private GameObject m_roomManager;
 
 
     private bool _roomCompleted;
