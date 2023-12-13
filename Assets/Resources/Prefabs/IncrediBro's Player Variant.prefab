@@ -60,6 +60,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3889458360521871880, guid: 838db29415f63354aa7b7c6c2bad2143, type: 3}
+      propertyPath: m_Radius
+      value: 0.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 3889458360521871880, guid: 838db29415f63354aa7b7c6c2bad2143, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.24
+      objectReference: {fileID: 0}
     - target: {fileID: 5430562469361747464, guid: 838db29415f63354aa7b7c6c2bad2143, type: 3}
       propertyPath: m_LocalPosition.z
       value: -10
@@ -96,7 +104,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: IncrediBro's Player Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6201412828681607352, guid: 838db29415f63354aa7b7c6c2bad2143, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

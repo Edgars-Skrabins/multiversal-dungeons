@@ -30,4 +30,9 @@ public class GameManager : Singleton<GameManager>
             m_players.Add(playerStatsCS);
         }
     }
+
+    public Transform GetPlayerTransform()
+    {
+        return m_players[0].m_playerTF;
+    }
 }
