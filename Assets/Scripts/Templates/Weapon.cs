@@ -2,7 +2,7 @@ using UnityEngine;
 
 public abstract class Weapon : MonoBehaviour
 {
-    [Header("Player Reference")]
+    [Header("Player References")]
     [SerializeField] protected Player_Stats m_playerStatsCS;
 
     [Header("Weapon Settings")]

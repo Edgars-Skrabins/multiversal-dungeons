@@ -37,7 +37,9 @@ public class Enemy_Movement : MonoBehaviour
     private void FollowPlayer()
     {
         if(IsPlayerInDetectionRadius())
-        m_enemyAgent.SetDestination(m_enemyTarget.position);
+        {
+            m_enemyAgent.SetDestination(m_enemyTarget.position);
+        }
     }
 
     private void PatrolRandomly()
@@ -53,6 +55,8 @@ public class Enemy_Movement : MonoBehaviour
             m_enemyTarget = null;
             return false;
         }
+
+        // Uses player to sets target
         m_enemyTarget = GameManager.I.GetPlayerTransform();
         return true;
     }

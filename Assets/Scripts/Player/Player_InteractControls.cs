@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class Player_InteractControls : MonoBehaviour
@@ -32,22 +33,21 @@ public class Player_InteractControls : MonoBehaviour
         Collider2D[] colliders = new Collider2D[10];
         int colliderCount =  Physics2D.OverlapCircleNonAlloc(m_interactOriginTF.position, m_interactRange, colliders,m_interactLayer);
 
-
         float closestDistance = Mathf.Infinity;
-        Transform nearestTF = null;
 
         for (int i = 0; i < colliderCount; i++)
         {
             float distance = Vector2.Distance(transform.position, colliders[i].transform.position);
 
-            if (distance < closestDistance)
+            bool isColliderClosest = distance < closestDistance;
+
+            if(!isColliderClosest) continue;
+            closestDistance = distance;
+            Transform nearestTF = colliders[i].transform;
+
+            if (nearestTF.TryGetComponent(out IInteractable interactable))
             {
-                closestDistance = distance;
-                nearestTF = colliders[i].transform;
-                if (nearestTF.TryGetComponent(out IInteractable interactable))
-                {
-                    SetInteractable(nearestTF, interactable);
-                }
+                SetInteractable(nearestTF, interactable);
             }
         }
 
@@ -83,7 +83,10 @@ public class Player_InteractControls : MonoBehaviour
     private bool ObjectOutOfRange(Transform _objectToCheck)
     {
         float distance = Vector2.Distance(transform.position, _objectToCheck.position);
-        if (distance > m_interactRange)
+
+        bool isOutOfRange = distance > m_interactRange;
+
+        if (isOutOfRange)
         {
             return true;
         }

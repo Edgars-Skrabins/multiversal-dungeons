@@ -22,17 +22,22 @@ public class GameManager : Singleton<GameManager>
         SpawnPlayer();
     }
 
+    private int m_currentPlayerIDIteration;
     private void SpawnPlayer()
     {
         GameObject player = Instantiate(m_playerPrefab, m_playerSpawnPointTF.position, m_playerSpawnPointTF.rotation);
+
         if(player.TryGetComponent(out Player_Stats playerStatsCS))
         {
             m_players.Add(playerStatsCS);
+            playerStatsCS.m_playerID = m_currentPlayerIDIteration;
+            m_currentPlayerIDIteration += 1;
         }
     }
 
     public Transform GetPlayerTransform()
     {
-        return m_players[0].m_playerTF;
+        // TODO: Remove
+        return m_players[0].PlayerTF;
     }
 }

@@ -16,7 +16,11 @@ public abstract class Weapon_Projectile : Weapon
     {
         foreach(GameObject projectile in m_bulletProjectilePrefabs)
         {
-            Instantiate(projectile,m_shootLocations[0].position, m_shootLocations[0].rotation);
+            GameObject bullet = Instantiate(projectile,m_shootLocations[0].position, m_shootLocations[0].rotation);
+            if(bullet.TryGetComponent(out Bullet bulletCS))
+            {
+                bulletCS.SetOwner(m_playerStatsCS);
+            }
         }
     }
 

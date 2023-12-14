@@ -10,7 +10,7 @@ public abstract class Weapon_Hitscan : Weapon
     protected override void Shoot()
     {
         Vector2 mousePosition = InputManager.I.GetWorldMousePosition();
-        Vector2 playerToMouse = mousePosition - (Vector2)m_playerStatsCS.m_playerTF.position;
+        Vector2 playerToMouse = mousePosition - (Vector2)m_playerStatsCS.PlayerTF.position;
 
         RaycastHit2D hit = Physics2D.Raycast(m_shootLocations[0].position, playerToMouse);
 

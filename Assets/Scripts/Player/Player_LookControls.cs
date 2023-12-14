@@ -1,4 +1,3 @@
-using MultiversalDungeons.Utilities;
 using UnityEngine;
 
 public class Player_LookControls : MonoBehaviour
@@ -10,7 +9,6 @@ public class Player_LookControls : MonoBehaviour
 
     private void Awake()
     {
-        //Utilities.Initialize();
         UnparentCamerasAndTarget();
     }
 
@@ -18,7 +16,6 @@ public class Player_LookControls : MonoBehaviour
     {
         m_virtualCameraTF.SetParent(null);
         m_mainCameraTF.SetParent(null);
-        //m_cameraTargetTF.SetParent(null);
     }
 
     private void Update()
@@ -36,6 +33,4 @@ public class Player_LookControls : MonoBehaviour
 
         m_cameraTargetTF.position = targetPosition;
     }
-
-
 }

@@ -4,14 +4,13 @@ public class Player_AnimationController : MonoBehaviour
 {
     [SerializeField] private Animator m_playerAnimator;
 
-
     private void Update()
     {
         SetFacingDirection();
         SetSpeed();
     }
 
-    void SetFacingDirection()
+    private void SetFacingDirection()
     {
         Vector2 mousePosition = InputManager.I.GetWorldMousePosition();
         Vector2 direction = mousePosition - (Vector2)transform.position;
@@ -19,47 +18,47 @@ public class Player_AnimationController : MonoBehaviour
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        float horizontal = 0f;
-        float vertical = 0f;
+        float horizontalAnimParam = 0f;
+        float verticalAnimParam = 0f;
 
         // Determine the facing direction based on the angle
         switch (angle)
         {
             case >= 0f and <= 45f:
                 // Up Right
-                horizontal = 1f;
-                vertical = 1f;
+                horizontalAnimParam = 1f;
+                verticalAnimParam = 1f;
                 break;
             case > 45f and <= 135f:
                 // Up
-                vertical = 1f;
-                horizontal = 0f;
+                verticalAnimParam = 1f;
+                horizontalAnimParam = 0f;
                 break;
             case > 135f and <= 180f:
                 // Up Left
-                vertical = 1f;
-                horizontal = -1f;
+                verticalAnimParam = 1f;
+                horizontalAnimParam = -1f;
                 break;
             case < 0f and >= -45:
                 // Down Right
-                horizontal = 1f;
-                vertical = -1f;
+                horizontalAnimParam = 1f;
+                verticalAnimParam = -1f;
                 break;
             case < -45f and >= -135f:
                 // Down
-                vertical = -1f;
-                horizontal = 0f;
+                verticalAnimParam = -1f;
+                horizontalAnimParam = 0f;
                 break;
             case < -135f and >= -180f:
                 // Down Left
-                vertical = -1f;
-                horizontal = -1f;
+                verticalAnimParam = -1f;
+                horizontalAnimParam = -1f;
                 break;
         }
-        
+
         // Update animator parameters for facing direction only
-        m_playerAnimator.SetFloat("Horizontal", horizontal);
-        m_playerAnimator.SetFloat("Vertical", vertical);
+        m_playerAnimator.SetFloat("Horizontal", horizontalAnimParam);
+        m_playerAnimator.SetFloat("Vertical", verticalAnimParam);
     }
 
     private void SetSpeed()

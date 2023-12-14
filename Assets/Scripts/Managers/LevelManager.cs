@@ -7,9 +7,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private bool m_defeatedAllEnemies;
 
 
-    private bool _roomCompleted;
-    private GameObject _currentRoom;
-    private int _currentRoomIndex;  
+    private bool m_roomCompleted;
+    private GameObject m_currentRoom;
+    private int m_currentRoomIndex;
 
     private void Start()
     {
@@ -18,8 +18,8 @@ public class LevelManager : MonoBehaviour
 
     private void InitializeRooms()
     {
-        _currentRoomIndex = 0;
-        ActivateCurrentRoom(_currentRoomIndex);
+        m_currentRoomIndex = 0;
+        ActivateCurrentRoom(m_currentRoomIndex);
     }
 
     private void Update()
@@ -33,27 +33,28 @@ public class LevelManager : MonoBehaviour
     private void AfterDefeatAllEnemies()
     {
         m_defeatedAllEnemies = false;
-        _roomCompleted = true;
+        m_roomCompleted = true;
         CreatePortal();
     }
 
     private void CreatePortal()
     {
-        Instantiate(m_portal, _currentRoom.GetComponent<RoomManager>().m_PortalSpawnPoint);
+        Instantiate(m_portal, m_currentRoom.GetComponent<RoomManager>().m_PortalSpawnPoint);
     }
 
     public void GoToNextRoom()
     {
-        _roomCompleted = false;
-        _currentRoom.SetActive(false);
+        m_roomCompleted = false;
+        m_currentRoom.SetActive(false);
 
-        if ((_currentRoomIndex + 1) < m_rooms.Length)
+        if (m_currentRoomIndex + 1 < m_rooms.Length)
         {
-            _currentRoomIndex += 1;
-            ActivateCurrentRoom(_currentRoomIndex);
+            m_currentRoomIndex += 1;
+            ActivateCurrentRoom(m_currentRoomIndex);
         }
         else
         {
+            // TODO: Level finish implementation
             Debug.Log("You have reached the end of this Level, Congrats!!! ");
         }
 
@@ -63,9 +64,10 @@ public class LevelManager : MonoBehaviour
     {
         // _room -> the room index you want to activate
 
-        _currentRoom = m_rooms[_room].gameObject;
-        _currentRoom.SetActive(true);
-        GameManager.I.GetPlayerTransform().position = _currentRoom.GetComponent<RoomManager>().m_PlayerSpawnPoint.position;
+        m_currentRoom = m_rooms[_room].gameObject;
+        m_currentRoom.SetActive(true);
+
+        GameManager.I.GetPlayerTransform().position = m_currentRoom.GetComponent<RoomManager>().m_PlayerSpawnPoint.position;
     }
 
 }

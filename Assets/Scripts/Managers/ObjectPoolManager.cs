@@ -31,24 +31,24 @@ public class ObjectPoolManager : Singleton<ObjectPoolManager>
     {
         // ----- Makes a list for each of the aray list variables ----- 
 
-        for (int i = 0; i < objectPools.Length; i++)
+        foreach(var t in objectPools)
         {
-            objectPools[i].pooledObjects = new List<GameObject>();
+            t.pooledObjects = new List<GameObject>();
         }
 
         // ----- Instantiates objects,enables the DontDestroyOnLoad and adds them to the list -----
 
-        for (int i = 0; i < objectPools.Length; i++)
+        foreach(var t1 in objectPools)
         {
-            for (int t = 0; t < objectPools[i].pooledAmount; t++)
+            for (int t = 0; t < t1.pooledAmount; t++)
             {
-                GameObject obj = Instantiate(objectPools[i].pooledObject);
-                if(objectPools[i].dontDestroyOnLoad == true)
+                GameObject obj = Instantiate(t1.pooledObject);
+                if(t1.dontDestroyOnLoad)
                 {
                     DontDestroyOnLoad(obj);
                 }
                 obj.SetActive(false);
-                objectPools[i].pooledObjects.Add(obj);
+                t1.pooledObjects.Add(obj);
             }
         }
     }
@@ -65,24 +65,21 @@ public class ObjectPoolManager : Singleton<ObjectPoolManager>
         // ----- Returns a GameObject -----
         ObjectPool op = Array.Find(objectPools, ObjectPools => ObjectPools.name == name);
 
-        for (int i = 0; i < op.pooledObjects.Count; i++)
+        foreach(GameObject t in op.pooledObjects)
         {
-            if (!op.pooledObjects[i].activeInHierarchy)
+            if (!t.activeInHierarchy)
             {
-                return op.pooledObjects[i];
+                return t;
             }
         }       
 
         // ----- Spawns a new object if willgrow is true and if there are not enough objects in the list -----
 
-        if (op.willGrow == true)
-        {
-            GameObject obj = Instantiate(op.pooledObject);
-            op.pooledObjects.Add(obj);
-            return obj;
-        }
+        if(op.willGrow != true) return null;
+        GameObject obj = Instantiate(op.pooledObject);
+        op.pooledObjects.Add(obj);
+        return obj;
 
         // If willGrow is false and there isnt enough objects it returns null to not cause an error
-        return null;
     }
 }

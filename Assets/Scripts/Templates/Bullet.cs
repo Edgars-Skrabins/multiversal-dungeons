@@ -2,6 +2,8 @@ using UnityEngine;
 
 public abstract class Bullet : MonoBehaviour
 {
+    [Header("Player References")]
+    [SerializeField] protected Player_Stats m_playerStatsCS;
 
     [Header("Bullet Settings")]
     [SerializeField] protected int m_bulletDamage;
@@ -90,8 +92,15 @@ public abstract class Bullet : MonoBehaviour
         
         var obj = Instantiate(m_bulletImpactVFX, m_bulletTF.position, m_bulletTF.rotation);
         Transform objTF = obj.transform;
+
+        // Player position for direction to player
         Vector3 playerDir = GameManager.I.GetPlayerTransform().position - objTF.position;
         objTF.position += playerDir * vfxOffsetFromWall;
+    }
+
+    public virtual void SetOwner(Player_Stats _playerStatsCS)
+    {
+        m_playerStatsCS = _playerStatsCS;
     }
 
 }
