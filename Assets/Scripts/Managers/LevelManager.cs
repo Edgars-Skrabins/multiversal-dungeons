@@ -9,7 +9,7 @@ public class LevelManager : MonoBehaviour
 
     private bool _roomCompleted;
     private GameObject _currentRoom;
-    private int _currentRoomIndex;
+    private int _currentRoomIndex;  
 
     private void Start()
     {
@@ -32,21 +32,18 @@ public class LevelManager : MonoBehaviour
 
     private void AfterDefeatAllEnemies()
     {
+        m_defeatedAllEnemies = false;
         _roomCompleted = true;
         CreatePortal();
     }
 
     private void CreatePortal()
     {
-        Debug.Log("_currentRoom:: " + _currentRoom);
-        Debug.Log("m_PortalSpawnPoint:: " + _currentRoom.GetComponent<RoomManager>().m_PortalSpawnPoint);
-
         Instantiate(m_portal, _currentRoom.GetComponent<RoomManager>().m_PortalSpawnPoint);
     }
 
     public void GoToNextRoom()
     {
-        m_defeatedAllEnemies = false;
         _roomCompleted = false;
         _currentRoom.SetActive(false);
 
@@ -68,6 +65,7 @@ public class LevelManager : MonoBehaviour
 
         _currentRoom = m_rooms[_room].gameObject;
         _currentRoom.SetActive(true);
+        GameManager.I.GetPlayerTransform().position = _currentRoom.GetComponent<RoomManager>().m_PlayerSpawnPoint.position;
     }
 
 }

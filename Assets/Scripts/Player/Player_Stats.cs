@@ -17,7 +17,7 @@ public class Player_Stats : MonoBehaviour
 
     [field: SerializeField] public Player_WeaponManager m_weaponManagerCS;
 
-    private void Start()
+    private void Awake()
     {
         InitializeReferences();
     }

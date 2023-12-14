@@ -1313,7 +1313,7 @@ MonoBehaviour:
   m_interactRange: 1
   m_interactLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2048
 --- !u!50 &798317709502443158
 Rigidbody2D:
   serializedVersion: 4

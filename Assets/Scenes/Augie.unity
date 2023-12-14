@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 21614291}
   m_Layer: 0
-  m_Name: EnemySpawnPointR2
+  m_Name: EnemySpawnPointR6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,7 +148,7 @@ Transform:
   m_GameObject: {fileID: 21614290}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.83, y: -5.58, z: 0}
+  m_LocalPosition: {x: -9.46, y: -4.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1834,6 +1834,37 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &75276463
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 75276464}
+  m_Layer: 0
+  m_Name: PlayerSpawnPointR7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &75276464
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75276463}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.52, y: 5.78, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1205087681}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &97392681
 GameObject:
   m_ObjectHideFlags: 0
@@ -1968,7 +1999,7 @@ GameObject:
   m_Component:
   - component: {fileID: 209427918}
   m_Layer: 0
-  m_Name: EnemySpawnPointR2
+  m_Name: EnemySpawnPointR4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1983,7 +2014,7 @@ Transform:
   m_GameObject: {fileID: 209427917}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.83, y: -5.58, z: 0}
+  m_LocalPosition: {x: 3.7, y: -2.23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3177,6 +3208,37 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &272460077
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 272460078}
+  m_Layer: 0
+  m_Name: PlayerSpawnPointR6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &272460078
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272460077}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.29, y: -0.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 878526938}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &313840024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3295,7 +3357,7 @@ GameObject:
   m_Component:
   - component: {fileID: 460526611}
   m_Layer: 0
-  m_Name: PortalSpawnPointR2
+  m_Name: PortalSpawnPointR5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3310,7 +3372,7 @@ Transform:
   m_GameObject: {fileID: 460526610}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.77, y: 4.59, z: 0}
+  m_LocalPosition: {x: -4.06, y: -0.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3326,7 +3388,7 @@ GameObject:
   m_Component:
   - component: {fileID: 538282012}
   m_Layer: 0
-  m_Name: PortalSpawnPointR2
+  m_Name: PortalSpawnPointR3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3357,7 +3419,7 @@ GameObject:
   m_Component:
   - component: {fileID: 561648427}
   m_Layer: 0
-  m_Name: EnemySpawnPointR2
+  m_Name: EnemySpawnPointR3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3394,7 +3456,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &672223192
 Transform:
   m_ObjectHideFlags: 0
@@ -3441,7 +3503,7 @@ GameObject:
   m_Component:
   - component: {fileID: 673246804}
   m_Layer: 0
-  m_Name: PortalSpawnPointR2
+  m_Name: PortalSpawnPointR4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3456,7 +3518,7 @@ Transform:
   m_GameObject: {fileID: 673246803}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.77, y: 4.59, z: 0}
+  m_LocalPosition: {x: -5.82, y: -2.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3472,7 +3534,7 @@ GameObject:
   m_Component:
   - component: {fileID: 692998991}
   m_Layer: 0
-  m_Name: PortalSpawnPointR2
+  m_Name: PortalSpawnPointR6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3487,7 +3549,7 @@ Transform:
   m_GameObject: {fileID: 692998990}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.77, y: 4.59, z: 0}
+  m_LocalPosition: {x: -5.89, y: 1.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4290,7 +4352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5379aa5f2c85b4fcebb719c59e14ed69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlayerSpawnPoint: {fileID: 0}
+  m_PlayerSpawnPoint: {fileID: 1250950030}
   m_PortalSpawnPoint: {fileID: 460526611}
   m_EnemySpawnPoints:
   - {fileID: 903631767}
@@ -4310,7 +4372,39 @@ Transform:
   - {fileID: 1753532700}
   - {fileID: 903631767}
   - {fileID: 460526611}
+  - {fileID: 1250950030}
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &787382495
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 787382496}
+  m_Layer: 0
+  m_Name: PlayerSpawnPointR9
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &787382496
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787382495}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.48, y: 1.46, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 887590165}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &816450842
 GameObject:
@@ -4384,25 +4478,7 @@ CompositeCollider2D:
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 816450846}
-    m_ColliderPaths:
-    - - X: 60000000
-        Y: 60000000
-      - X: -60000000
-        Y: 60000000
-      - X: -60000000
-        Y: -60000000
-      - X: 60000000
-        Y: -60000000
-    - - X: -50000000
-        Y: -50000000
-      - X: -50000000
-        Y: 50000000
-      - X: 50000000
-        Y: 50000000
-      - X: 50000000
-        Y: -50000000
+  m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
     - - {x: 5.999971, y: -6}
@@ -5083,6 +5159,37 @@ MonoBehaviour:
   m_PortalSpawnPoint: {fileID: 38355856}
   m_EnemySpawnPoints:
   - {fileID: 1887059242}
+--- !u!1 &824657919
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 824657920}
+  m_Layer: 0
+  m_Name: PlayerSpawnPointR3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &824657920
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824657919}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.21, y: -6.48, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1444763516}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &841015337
 GameObject:
   m_ObjectHideFlags: 0
@@ -6181,7 +6288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5379aa5f2c85b4fcebb719c59e14ed69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlayerSpawnPoint: {fileID: 0}
+  m_PlayerSpawnPoint: {fileID: 272460078}
   m_PortalSpawnPoint: {fileID: 692998991}
   m_EnemySpawnPoints:
   - {fileID: 21614291}
@@ -6201,6 +6308,7 @@ Transform:
   - {fileID: 1882349068}
   - {fileID: 21614291}
   - {fileID: 692998991}
+  - {fileID: 272460078}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &887590163
@@ -6232,7 +6340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5379aa5f2c85b4fcebb719c59e14ed69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlayerSpawnPoint: {fileID: 0}
+  m_PlayerSpawnPoint: {fileID: 787382496}
   m_PortalSpawnPoint: {fileID: 1374094350}
   m_EnemySpawnPoints:
   - {fileID: 2142247414}
@@ -6252,6 +6360,7 @@ Transform:
   - {fileID: 941343414}
   - {fileID: 2142247414}
   - {fileID: 1374094350}
+  - {fileID: 787382496}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &903631766
@@ -6264,7 +6373,7 @@ GameObject:
   m_Component:
   - component: {fileID: 903631767}
   m_Layer: 0
-  m_Name: EnemySpawnPointR2
+  m_Name: EnemySpawnPointR5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6279,7 +6388,7 @@ Transform:
   m_GameObject: {fileID: 903631766}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.83, y: -5.58, z: 0}
+  m_LocalPosition: {x: -1.68, y: -7.69, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11598,7 +11707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5379aa5f2c85b4fcebb719c59e14ed69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlayerSpawnPoint: {fileID: 0}
+  m_PlayerSpawnPoint: {fileID: 75276464}
   m_PortalSpawnPoint: {fileID: 1903219555}
   m_EnemySpawnPoints:
   - {fileID: 1303072850}
@@ -11618,7 +11727,39 @@ Transform:
   - {fileID: 1136746754}
   - {fileID: 1303072850}
   - {fileID: 1903219555}
+  - {fileID: 75276464}
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1250950029
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1250950030}
+  m_Layer: 0
+  m_Name: PlayerSpawnPointR5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1250950030
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250950029}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.79, y: 0.06, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 733853538}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1266083851
 GameObject:
@@ -11739,7 +11880,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1303072850}
   m_Layer: 0
-  m_Name: EnemySpawnPointR2
+  m_Name: EnemySpawnPointR7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11754,7 +11895,7 @@ Transform:
   m_GameObject: {fileID: 1303072849}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.83, y: -5.58, z: 0}
+  m_LocalPosition: {x: 3.98, y: -7.63, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13209,6 +13350,37 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1354755231
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1354755232}
+  m_Layer: 0
+  m_Name: PlayerSpawnPointR4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1354755232
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354755231}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.76, y: -8.01, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1809093535}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1370848983
 GameObject:
   m_ObjectHideFlags: 0
@@ -13238,7 +13410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5379aa5f2c85b4fcebb719c59e14ed69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlayerSpawnPoint: {fileID: 0}
+  m_PlayerSpawnPoint: {fileID: 1447660664}
   m_PortalSpawnPoint: {fileID: 1704544505}
   m_EnemySpawnPoints:
   - {fileID: 2050848810}
@@ -13258,6 +13430,7 @@ Transform:
   - {fileID: 1755670236}
   - {fileID: 2050848810}
   - {fileID: 1704544505}
+  - {fileID: 1447660664}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1374094349
@@ -13270,7 +13443,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1374094350}
   m_Layer: 0
-  m_Name: PortalSpawnPointR2
+  m_Name: PortalSpawnPointR9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13285,7 +13458,7 @@ Transform:
   m_GameObject: {fileID: 1374094349}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.77, y: 4.59, z: 0}
+  m_LocalPosition: {x: -0.98, y: -0.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14394,7 +14567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5379aa5f2c85b4fcebb719c59e14ed69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlayerSpawnPoint: {fileID: 0}
+  m_PlayerSpawnPoint: {fileID: 824657920}
   m_PortalSpawnPoint: {fileID: 538282012}
   m_EnemySpawnPoints:
   - {fileID: 561648427}
@@ -14414,7 +14587,39 @@ Transform:
   - {fileID: 400850202}
   - {fileID: 561648427}
   - {fileID: 538282012}
+  - {fileID: 824657920}
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1447660663
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1447660664}
+  m_Layer: 0
+  m_Name: PlayerSpawnPointR8
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1447660664
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447660663}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.02, y: -3.25, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1370848985}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1517091614
 GameObject:
@@ -15616,7 +15821,7 @@ Transform:
   m_GameObject: {fileID: 1545406228}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.57, y: -0.43, z: 0}
+  m_LocalPosition: {x: 3.72, y: -0.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18518,7 +18723,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1704544505}
   m_Layer: 0
-  m_Name: PortalSpawnPointR2
+  m_Name: PortalSpawnPointR8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18533,7 +18738,7 @@ Transform:
   m_GameObject: {fileID: 1704544504}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.77, y: 4.59, z: 0}
+  m_LocalPosition: {x: 4.5, y: -0.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20587,7 +20792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5379aa5f2c85b4fcebb719c59e14ed69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlayerSpawnPoint: {fileID: 0}
+  m_PlayerSpawnPoint: {fileID: 1354755232}
   m_PortalSpawnPoint: {fileID: 673246804}
   m_EnemySpawnPoints:
   - {fileID: 209427918}
@@ -20607,6 +20812,7 @@ Transform:
   - {fileID: 2044755044}
   - {fileID: 209427918}
   - {fileID: 673246804}
+  - {fileID: 1354755232}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1882349067
@@ -20696,7 +20902,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1903219555}
   m_Layer: 0
-  m_Name: PortalSpawnPointR2
+  m_Name: PortalSpawnPointR7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20711,7 +20917,7 @@ Transform:
   m_GameObject: {fileID: 1903219554}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.77, y: 4.59, z: 0}
+  m_LocalPosition: {x: 4.08, y: 4.88, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24374,7 +24580,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2050848810}
   m_Layer: 0
-  m_Name: EnemySpawnPointR2
+  m_Name: EnemySpawnPointR8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24389,7 +24595,7 @@ Transform:
   m_GameObject: {fileID: 2050848809}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.83, y: -5.58, z: 0}
+  m_LocalPosition: {x: -2.87, y: -3.31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24405,7 +24611,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2142247414}
   m_Layer: 0
-  m_Name: EnemySpawnPointR2
+  m_Name: EnemySpawnPointR9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24420,7 +24626,7 @@ Transform:
   m_GameObject: {fileID: 2142247413}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.83, y: -5.58, z: 0}
+  m_LocalPosition: {x: 3.33, y: -6.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

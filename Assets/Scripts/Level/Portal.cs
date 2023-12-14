@@ -8,6 +8,7 @@ public class Portal : MonoBehaviour, IInteractable
         GameObject _levelManager = GameObject.Find("LevelManager");
         if (_levelManager != null)
         {
+            Debug.Log("Interact with Portal");
             _levelManager.GetComponent<LevelManager>().GoToNextRoom();
         }
         else
