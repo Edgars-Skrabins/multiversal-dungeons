@@ -47,6 +47,7 @@ public class ObjectPoolManager : Singleton<ObjectPoolManager>
                 {
                     DontDestroyOnLoad(obj);
                 }
+
                 obj.SetActive(false);
                 t1.pooledObjects.Add(obj);
             }

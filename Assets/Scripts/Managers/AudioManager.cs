@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -16,21 +17,30 @@ public class GameAudio
     public bool isMusic; // Is it music
 
     // Constructor for initializing the GameAudio object
-    public GameAudio(string name, AudioClip audioClip, bool start, bool shouldLoop, bool sfx, bool music)
+    public GameAudio(string _name, AudioClip _audioClip, bool _start, bool _shouldLoop, bool _sfx, bool _music)
     {
-        clipName = name;
-        clip = audioClip;
-        playOnStart = start;
-        loop = shouldLoop;
-        isSFX = sfx;
-        isMusic = music;
+        clipName = _name;
+        clip = _audioClip;
+        playOnStart = _start;
+        loop = _shouldLoop;
+        isSFX = _sfx;
+        isMusic = _music;
+    }
+
+    public void InitializeAudioSource(AudioSource _audioSource)
+    {
+        _audioSource.clip = clip;
+        _audioSource.loop = loop;
     }
 }
 
 public class AudioManager : Singleton<AudioManager>
 {
-    [SerializeField] private ObjectPoolManager.ObjectPool m_audioSourcePool;
+    //[SerializeField] private ObjectPoolManager.ObjectPool m_audioSourcePool;
+    
+    public float m_sfxVolume;
 
+    public float m_musicVolume;
 
     //Audio Manager should be able to
     //TODO: store sounds easily
@@ -39,7 +49,6 @@ public class AudioManager : Singleton<AudioManager>
     //TODO: Play the sounds Without a location (therefore always heard)
     //TODO: Automatically play startup sounds
 
-    private Dictionary<string, AudioSource> soundDictionary = new Dictionary<string, AudioSource>();
 
     public List<GameAudio> gameAudioList;
 
@@ -47,7 +56,6 @@ public class AudioManager : Singleton<AudioManager>
     {
         foreach (GameAudio gameAudio in gameAudioList)
         {
-            AddSound(gameAudio.clipName, gameAudio.clip, gameAudio.loop);
             if (gameAudio.playOnStart)
             {
                 PlaySound(gameAudio.clipName);
@@ -55,41 +63,65 @@ public class AudioManager : Singleton<AudioManager>
         }
     }
 
-    public void AddSound(string soundName, AudioClip clip, bool loop)
+    private void Update()
     {
-        if (!soundDictionary.ContainsKey(soundName))
-        {
-            AudioSource audioSource = gameObject.AddComponent<AudioSource>();
-            audioSource.clip = clip;
-            audioSource.loop = loop;
-            soundDictionary.Add(soundName, audioSource);
-        }
+        if(Input.GetMouseButtonDown(0)) PlaySound("Shoot");
     }
 
-    public void PlaySound(string soundName)
+    public void PlaySound(string _soundName)
     {
-        if (soundDictionary.ContainsKey(soundName))
+        if (GetAudioIfNameValid(_soundName) != null)
         {
-            soundDictionary[soundName].Play();
+            GameObject pooledSource = ObjectPoolManager.I.GetPooledObject("Audio Sources");
+            pooledSource.SetActive(true);
+            AudioSource aSource = pooledSource.GetComponent<AudioSource>();
+            GameAudio audioData = GetAudioIfNameValid(_soundName);
+
+            audioData.InitializeAudioSource(aSource);
+            if (audioData.isSFX)
+            {
+                aSource.volume = m_sfxVolume;
+            }
+            else
+            {
+                aSource.volume = m_musicVolume;
+            }
+
+            if (audioData.loop)
+            {
+                aSource.Play();
+            }
+            else
+            {
+                StartCoroutine(PlayAndDeactivateResetAudioSourceObjectCo(aSource));
+            }
         }
         else
         {
-            Debug.LogWarning("Sound does not exist in the dictionary: " + soundName);
+            Debug.LogWarning("Sound does not exist in the dictionary: " + _soundName);
         }
     }
 
-    public void PlaySoundAtLocation(string soundName, Vector3 position)
+    private GameAudio GetAudioIfNameValid(string soundName)
     {
-        if (soundDictionary.ContainsKey(soundName))
+        for (int i = 0; i < gameAudioList.Count; i++)
         {
-            AudioSource.PlayClipAtPoint(soundDictionary[soundName].clip, position);
+            if (gameAudioList[i].clipName == soundName)
+                return gameAudioList[i];
         }
-        else
-        {
-            Debug.LogWarning("Sound does not exist in the dictionary: " + soundName);
-        }
+
+        Debug.LogError("Game Audio Not Found! Please Check Name..");
+        return null;
     }
 
+    private IEnumerator PlayAndDeactivateResetAudioSourceObjectCo(AudioSource _audioSource)
+    {
+        _audioSource.Play();
+        yield return new WaitForSeconds(_audioSource.clip.length);
+        _audioSource.Stop();
+        _audioSource.clip = null;
+        _audioSource.gameObject.SetActive(false);
+    }
 
 #if UNITY_EDITOR
     [CustomEditor(typeof(AudioManager))]
@@ -140,12 +172,13 @@ public class AudioManager : Singleton<AudioManager>
                     EditorGUILayout.EndVertical();
                 }
             }
-
+            /*
             GUILayout.Space(10);
             EditorGUILayout.LabelField("Volume Control", EditorStyles.boldLabel);
 
-//            audioManager.musicVolume = EditorGUILayout.Slider("Music Volume", audioManager.musicVolume, 0f, 1f);
-//            audioManager.sfxVolume = EditorGUILayout.Slider("SFX Volume", audioManager.sfxVolume, 0f, 1f);
+            audioManager.m_musicVolume = EditorGUILayout.Slider("Music Volume", audioManager.m_musicVolume, 0f, 1f);
+            audioManager.m_sfxVolume = EditorGUILayout.Slider("SFX Volume", audioManager.m_sfxVolume, 0f, 1f);
+            */
         }
     }
 #endif
