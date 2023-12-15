@@ -2,15 +2,11 @@ using UnityEngine;
 
 public class Enemy_Stats : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Header("Enemy Movement")]
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public float m_enemyMoveSpeed;
+
+    [Header("Enemy Detection Range")]
+
+    public float m_enemyRange = 2.5f;
 }

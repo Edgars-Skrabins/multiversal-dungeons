@@ -1,0 +1,1020 @@
+fileFormatVersion: 2
+guid: d2784b52e70e840b6bf1d6218ba09e52
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 0
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Placeholder Sprites - Idle Down 0
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 775
+        width: 16
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d19ca2fa1f8545b68ec85d2e53e8b66
+      internalID: -588771363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Idle Down 1
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 775
+        width: 16
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7be39b7049a5d44159486eba21cc69a9
+      internalID: -305693412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Idle Down 2
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 775
+        width: 16
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdaa679daf6294aeba8c7e9881ac6ad2
+      internalID: 1163142298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Idle Down 3
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 775
+        width: 16
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a4bb1ebf9b7a469c85770a7fe36fb11
+      internalID: -1357438446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Idle DownRight 0
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 749
+        width: 16
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fa66ddf6376e4f93894429902ba66ea
+      internalID: -1466829327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Idle DownRight 1
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 749
+        width: 16
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0c4b99e557114a0aa455c538eace93f
+      internalID: -1497735515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Idle DownRight 2
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 749
+        width: 16
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c34603188009e43099a4f16e4bbaa752
+      internalID: 1426283261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Idle DownRight 3
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 749
+        width: 16
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b8bfd392233f465b8fc6bdc953d5190
+      internalID: -633083231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Idle Up 0
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 723
+        width: 16
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85a06648a39e5440a8fa410dc89e0710
+      internalID: -1991379684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Idle Up 1
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 723
+        width: 16
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfbef31936ab046d7a41b637d1d808eb
+      internalID: 820636690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Idle Up 2
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 723
+        width: 16
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71828874c753146b79089f8f73720a0b
+      internalID: 1884887803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Idle Up 3
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 723
+        width: 16
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95ae14ccd5f1449078beeea275141a10
+      internalID: -75272668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Idle UpRight 0
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 696
+        width: 15
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beed8aa6fde0945bfa343216f8a04973
+      internalID: 1653173468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Idle UpRight 1
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 696
+        width: 15
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46351cd96a642466ebee8117324087cc
+      internalID: -550858489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Idle UpRight 2
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 696
+        width: 15
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ef536229734c4116939a202bce49a5c
+      internalID: 1079396918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Idle UpRight 3
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 696
+        width: 15
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 674166a22e6b14af1bdda2f106b6274c
+      internalID: 1873789913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Walk Down 0
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 657
+        width: 16
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb3728b6c27984bc69fb83b1e03202f1
+      internalID: 695624496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Walk Down 1
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 657
+        width: 16
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3ec864b9b92a4f47a27f84a2814c8c6
+      internalID: 1125858204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Walk Down 2
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 657
+        width: 16
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 844aee0df4fac45ec91de2f86a3bbef3
+      internalID: 1525525085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Walk Down 3
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 657
+        width: 14
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8361ecc1f7144c34bf286e290b80db5
+      internalID: 634772053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Walk Down 4
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 657
+        width: 16
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58c0052d163bc464d8e05f8f16eaff87
+      internalID: 957625256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Walk Down 5
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 657
+        width: 16
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32baddd3d110f430fa63770a0d3c43f0
+      internalID: 891924553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Walk DownRight 0
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 628
+        width: 16
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a0a930a5c44c45cc837373b65766191
+      internalID: 1253886266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Walk DownRight 1
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 628
+        width: 16
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5553e1fa492f45939a16c9de238a0fb
+      internalID: 1293350327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Walk DownRight 2
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 628
+        width: 15
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0aad8de3a3b3407589d34f88fbeecb3
+      internalID: -371286202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Walk DownRight 3
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 628
+        width: 15
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99edab3c6b494463eb50c82ef705efe7
+      internalID: -570888022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Walk DownRight 4
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 628
+        width: 16
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16c559798ba0745d294a702bf09db913
+      internalID: -1814473368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Walk DownRight 5
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 628
+        width: 15
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9f9af68932cb41399a9567307ab83c7
+      internalID: -1211080005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Walk Up 0
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 600
+        width: 16
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5c4e8ad72e944048b54be43f7aded44
+      internalID: 1360157614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Walk Up 1
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 600
+        width: 16
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51c0d526aff714e6195e556aa978303c
+      internalID: -1073897476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Walk Up 2
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 600
+        width: 16
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 222e8300930e744df99dbee8b2581f58
+      internalID: 347000947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Walk Up 3
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 600
+        width: 14
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 071e047ac087742169d9c6e0ba7d3f79
+      internalID: -1593114631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Walk Up 4
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 600
+        width: 16
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71f5cfba52e8a4b608524f4f6e28833a
+      internalID: -350997032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Walk Up 5
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 600
+        width: 16
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d37ca2dc3c41c4cd79878455b4047fe5
+      internalID: 492749706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Walk UpRight 0
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 570
+        width: 15
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28d8d763ccc304f05b1ac64a80770f5c
+      internalID: -1658844825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Walk UpRight 1
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 570
+        width: 15
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d46de238281aa493f975262792e61cb5
+      internalID: -1086414567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Walk UpRight 2
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 570
+        width: 15
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e33002ed3f0a0407dbef294667b1bcfd
+      internalID: -467306614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Walk UpRight 3
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 570
+        width: 14
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf6fef034ea6741978bc8846b794df32
+      internalID: 130245955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Walk UpRight 4
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 570
+        width: 15
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb26cc5a97d0c44e2af192025835696e
+      internalID: -1168399623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Walk UpRight 5
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 570
+        width: 15
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee465dc3ef8b4c21bc1c5cd5a4c4001
+      internalID: 162911547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Placeholder Sprites - Idle Down 0: -305693412
+      Placeholder Sprites - Idle Down 1: 1163142298
+      Placeholder Sprites - Idle Down 2: -1357438446
+      Placeholder Sprites - Idle Down 3: -1466829327
+      Placeholder Sprites - Idle DownRight 0: -1497735515
+      Placeholder Sprites - Idle DownRight 1: 1426283261
+      Placeholder Sprites - Idle DownRight 2: -633083231
+      Placeholder Sprites - Idle DownRight 3: -1991379684
+      Placeholder Sprites - Idle Up 0: 820636690
+      Placeholder Sprites - Idle Up 1: 1884887803
+      Placeholder Sprites - Idle Up 2: -75272668
+      Placeholder Sprites - Idle Up 3: 1653173468
+      Placeholder Sprites - Idle UpRight 0: -550858489
+      Placeholder Sprites - Idle UpRight 1: 1079396918
+      Placeholder Sprites - Idle UpRight 2: 1873789913
+      Placeholder Sprites - Idle UpRight 3: 695624496
+      Placeholder Sprites - Walk Down 0: 695624496
+      Placeholder Sprites - Walk Down 1: 1125858204
+      Placeholder Sprites - Walk Down 2: 1525525085
+      Placeholder Sprites - Walk Down 3: 634772053
+      Placeholder Sprites - Walk Down 4: 957625256
+      Placeholder Sprites - Walk Down 5: 891924553
+      Placeholder Sprites - Walk DownRight 0: 1253886266
+      Placeholder Sprites - Walk DownRight 1: 1293350327
+      Placeholder Sprites - Walk DownRight 2: -371286202
+      Placeholder Sprites - Walk DownRight 3: -570888022
+      Placeholder Sprites - Walk DownRight 4: -1814473368
+      Placeholder Sprites - Walk DownRight 5: -1211080005
+      Placeholder Sprites - Walk Up 0: 1360157614
+      Placeholder Sprites - Walk Up 1: -1073897476
+      Placeholder Sprites - Walk Up 2: 347000947
+      Placeholder Sprites - Walk Up 3: -1593114631
+      Placeholder Sprites - Walk Up 4: -350997032
+      Placeholder Sprites - Walk Up 5: 492749706
+      Placeholder Sprites - Walk UpRight 0: -1658844825
+      Placeholder Sprites - Walk UpRight 1: -1086414567
+      Placeholder Sprites - Walk UpRight 2: -467306614
+      Placeholder Sprites - Walk UpRight 3: 130245955
+      Placeholder Sprites - Walk UpRight 4: -1168399623
+      Placeholder Sprites - Walk UpRight 5: 162911547
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

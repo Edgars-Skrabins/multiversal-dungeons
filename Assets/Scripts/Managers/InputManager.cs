@@ -6,11 +6,11 @@ using UnityEngine.InputSystem;
 public class InputManager : Singleton<InputManager>
 {
     private InputActions m_inputActions;
-    
+
     // Input events
     public event Action OnShootPerformed;
     public event Action OnInteractPerformed;
-    
+
     // Input actions
     private InputAction m_playerMovementIA;
     private InputAction m_playerShootIA;
@@ -56,7 +56,7 @@ public class InputManager : Singleton<InputManager>
 
     private void Shoot_Action(InputAction.CallbackContext _inputCtx)
     {
-        switch(_inputCtx.phase)
+        switch (_inputCtx.phase)
         {
             case InputActionPhase.Performed:
                 OnShootPerformed?.Invoke();
@@ -68,7 +68,7 @@ public class InputManager : Singleton<InputManager>
 
     private void Interact_Action(InputAction.CallbackContext _inputCtx)
     {
-        switch(_inputCtx.phase)
+        switch (_inputCtx.phase)
         {
             case InputActionPhase.Performed:
                 OnInteractPerformed?.Invoke();

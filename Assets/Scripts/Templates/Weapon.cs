@@ -2,6 +2,9 @@ using UnityEngine;
 
 public abstract class Weapon : MonoBehaviour
 {
+    [Header("Player References")]
+    [SerializeField] protected Player_Stats m_playerStatsCS;
+
     [Header("Weapon Settings")]
     [Space(5)]
     [SerializeField] protected float m_fireRateInSeconds;
@@ -12,6 +15,7 @@ public abstract class Weapon : MonoBehaviour
     [Space(5)]
     [SerializeField] protected GameObject m_shotVFX;
     [SerializeField] protected Transform[] m_shotVFXLocations;
+    [Space(5)]
     
     protected float m_fireRateTimer;
     protected bool m_fireRateZero;
@@ -21,7 +25,7 @@ public abstract class Weapon : MonoBehaviour
         SusbcribeToInputEvents();
     }
 
-    protected void Update()
+    protected virtual void Update()
     {
         CountFireRateTimer();
     }
@@ -61,6 +65,7 @@ public abstract class Weapon : MonoBehaviour
         foreach(Transform tf in m_shootLocations)
         {
             // TODO: Make the logic for checking if fire location obstructed
+            return true;
         }
         return false;
     }
@@ -94,4 +99,5 @@ public abstract class Weapon : MonoBehaviour
     {
         UnSusbcribeFromInputEvents();
     }
+
 }
