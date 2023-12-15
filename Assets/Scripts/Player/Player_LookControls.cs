@@ -20,6 +20,7 @@ public class Player_LookControls : MonoBehaviour
 
     private void Update()
     {
+        //TODO: Add limit to cursor distance
         MoveCameraTarget();
     }
 

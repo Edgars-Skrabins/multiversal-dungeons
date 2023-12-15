@@ -1222,7 +1222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_playerMoveSpeed: 5
   m_playerRB: {fileID: 798317709502443158}
-  m_playerTF: {fileID: 0}
+  PlayerTF: {fileID: 0}
   m_weaponManagerCS: {fileID: 0}
 --- !u!114 &4200087304847277667
 MonoBehaviour:
@@ -1252,7 +1252,7 @@ MonoBehaviour:
   m_virtualCameraTF: {fileID: 3540544353830417581}
   m_mainCameraTF: {fileID: 5430562469361747464}
   m_cameraTargetTF: {fileID: 5943808136695601924}
-  m_threshold: 5
+  m_threshold: 3
 --- !u!114 &2244271748087315884
 MonoBehaviour:
   m_ObjectHideFlags: 0
