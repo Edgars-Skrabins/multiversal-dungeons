@@ -6,15 +6,7 @@ public class RoomManager : MonoBehaviour
     public Transform m_PortalSpawnPoint;
     public Transform[] m_EnemySpawnPoints;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public enum Rooms { small, medium, large, boss }
+    public Rooms m_roomType;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -2,7 +2,16 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    [SerializeField] private GameObject[] m_rooms;
+    [Header(" ----- Small Rooms ----- ")]
+    [SerializeField] private GameObject[] m_rooms_small;
+    [Header(" ----- Medium Rooms ----- ")]
+    [SerializeField] private GameObject[] m_rooms_medium;
+    [Header(" ----- Large Rooms ----- ")]
+    [SerializeField] private GameObject[] m_rooms_large;
+    [Header(" ----- Boss Rooms ----- ")]
+    [SerializeField] private GameObject[] m_rooms_boss;
+
+
     [SerializeField] private GameObject m_portal;
     [SerializeField] private bool m_defeatedAllEnemies;
 
@@ -18,8 +27,8 @@ public class LevelManager : MonoBehaviour
 
     private void InitializeRooms()
     {
-        m_currentRoomIndex = 0;
-        ActivateCurrentRoom(m_currentRoomIndex);
+        m_currentRoomIndex = Random.Range(0, m_rooms_small.Length - 1);
+        ActivateCurrentRoom(m_rooms_small, m_currentRoomIndex);
     }
 
     private void Update()
@@ -47,10 +56,16 @@ public class LevelManager : MonoBehaviour
         m_roomCompleted = false;
         m_currentRoom.SetActive(false);
 
-        if (m_currentRoomIndex + 1 < m_rooms.Length)
+
+        // check size of current room
+
+        // check how many more of that size rooms the player has completed
+
+
+        if (m_currentRoomIndex + 1 < m_rooms_small.Length)
         {
             m_currentRoomIndex += 1;
-            ActivateCurrentRoom(m_currentRoomIndex);
+            ActivateCurrentRoom(m_rooms_small, m_currentRoomIndex);
         }
         else
         {
@@ -60,11 +75,11 @@ public class LevelManager : MonoBehaviour
 
     }
 
-    private void ActivateCurrentRoom(int _room)
+    private void ActivateCurrentRoom(GameObject[] _rooms_remaining, int _room)
     {
         // _room -> the room index you want to activate
 
-        m_currentRoom = m_rooms[_room].gameObject;
+        m_currentRoom = _rooms_remaining[_room].gameObject;
         m_currentRoom.SetActive(true);
 
         GameManager.I.GetPlayerTransform().position = m_currentRoom.GetComponent<RoomManager>().m_PlayerSpawnPoint.position;
