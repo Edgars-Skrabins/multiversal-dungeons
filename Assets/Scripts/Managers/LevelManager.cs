@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections.Generic;
+using System.Linq;
 
 public class LevelManager : MonoBehaviour
 {
@@ -11,6 +13,8 @@ public class LevelManager : MonoBehaviour
     [Header(" ----- Boss Rooms ----- ")]
     [SerializeField] private GameObject[] m_rooms_boss;
 
+    [Header(" ----- Playable Rooms ----- ")]
+    [SerializeField] private List<GameObject> m_rooms_playable = new List<GameObject>();
 
     [SerializeField] private GameObject m_portal;
     [SerializeField] private bool m_defeatedAllEnemies;
@@ -27,8 +31,42 @@ public class LevelManager : MonoBehaviour
 
     private void InitializeRooms()
     {
-        m_currentRoomIndex = Random.Range(0, m_rooms_small.Length - 1);
-        ActivateCurrentRoom(m_rooms_small, m_currentRoomIndex);
+        // randomly get some rooms from each type
+        //get 3 small rooms
+        for (int i = 0; i < 3; i++)
+        {
+            int _randomNumber = Random.Range(0, m_rooms_small.Length - 1);
+
+            if (!m_rooms_playable.Contains(m_rooms_small[_randomNumber]))
+            {
+                m_rooms_playable.Add(m_rooms_small[_randomNumber]);
+            }
+        }
+        //get 3 medium rooms
+        for (int j = 0; j < 3; j++)
+        {
+            int _randomNumber = Random.Range(0, m_rooms_medium.Length - 1);
+
+            if (!m_rooms_playable.Contains(m_rooms_medium[_randomNumber]))
+            {
+                m_rooms_playable.Add(m_rooms_medium[_randomNumber]);
+            }
+        }
+        //get 2 large rooms
+        for (int k = 0; k < 2; k++)
+        {
+            int _randomNumber = Random.Range(0, m_rooms_large.Length - 1);
+
+            if (!m_rooms_playable.Contains(m_rooms_large[_randomNumber]))
+            {
+                m_rooms_playable.Add(m_rooms_large[_randomNumber]);
+            }
+        }
+        //get 1 boss room
+        m_rooms_playable.Add(m_rooms_boss[Random.Range(0, m_rooms_boss.Length - 1)]);
+
+        m_currentRoomIndex = 0;
+        ActivateCurrentRoom(m_rooms_playable, m_currentRoomIndex);
     }
 
     private void Update()
@@ -62,10 +100,10 @@ public class LevelManager : MonoBehaviour
         // check how many more of that size rooms the player has completed
 
 
-        if (m_currentRoomIndex + 1 < m_rooms_small.Length)
+        if (m_currentRoomIndex + 1 < m_rooms_playable.Count)
         {
             m_currentRoomIndex += 1;
-            ActivateCurrentRoom(m_rooms_small, m_currentRoomIndex);
+            ActivateCurrentRoom(m_rooms_playable, m_currentRoomIndex);
         }
         else
         {
@@ -75,7 +113,7 @@ public class LevelManager : MonoBehaviour
 
     }
 
-    private void ActivateCurrentRoom(GameObject[] _rooms_remaining, int _room)
+    private void ActivateCurrentRoom(List<GameObject> _rooms_remaining, int _room)
     {
         // _room -> the room index you want to activate
 
