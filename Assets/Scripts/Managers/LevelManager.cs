@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine.AI;
 
 public class LevelManager : MonoBehaviour
 {
@@ -16,12 +17,16 @@ public class LevelManager : MonoBehaviour
     [Header(" ----- Playable Rooms ----- ")]
     [SerializeField] private List<GameObject> m_rooms_playable = new List<GameObject>();
 
+
+    [Header(" ----- Playable Rooms ----- ")]
+    [SerializeField] private GameObject m_navMesh;
+
     [SerializeField] private GameObject m_portal;
     [SerializeField] private bool m_defeatedAllEnemies;
 
 
+    public GameObject m_currentRoom;
     private bool m_roomCompleted;
-    private GameObject m_currentRoom;
     private int m_currentRoomIndex;
 
     private void Start()
@@ -119,6 +124,8 @@ public class LevelManager : MonoBehaviour
 
         m_currentRoom = _rooms_remaining[_room].gameObject;
         m_currentRoom.SetActive(true);
+
+        m_navMesh.GetComponent<Transform>();
 
         GameManager.I.GetPlayerTransform().position = m_currentRoom.GetComponent<RoomManager>().m_PlayerSpawnPoint.position;
     }
