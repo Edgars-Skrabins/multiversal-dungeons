@@ -25,8 +25,8 @@ public class EnemyManager : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        m_roomManager = m_levelManager.m_currentRoom.GetComponent<RoomManager>();
-        Instantiate(_enemyType_1, m_roomManager.m_EnemySpawnPoints[Random.Range(0, m_roomManager.m_EnemySpawnPoints.Length - 1)]);
+       // m_roomManager = m_levelManager.m_currentRoom.GetComponent<RoomManager>();
+       // Instantiate(_enemyType_1, m_roomManager.m_EnemySpawnPoints[Random.Range(0, m_roomManager.m_EnemySpawnPoints.Length - 1)]);
     }
 
 }

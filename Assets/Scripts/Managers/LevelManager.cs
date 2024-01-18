@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine.AI;
+using NavMeshPlus;
 
 public class LevelManager : MonoBehaviour
 {
@@ -125,7 +125,7 @@ public class LevelManager : MonoBehaviour
         m_currentRoom = _rooms_remaining[_room].gameObject;
         m_currentRoom.SetActive(true);
 
-        m_navMesh.GetComponent<Transform>();
+        m_navMesh.GetComponent<NavMeshPlus.Components.NavMeshSurface>().BuildNavMeshAsync();
 
         GameManager.I.GetPlayerTransform().position = m_currentRoom.GetComponent<RoomManager>().m_PlayerSpawnPoint.position;
     }
