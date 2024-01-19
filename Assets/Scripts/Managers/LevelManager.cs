@@ -1,7 +1,8 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
-using NavMeshPlus;
+using NavMeshPlus.Components;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class LevelManager : MonoBehaviour
 
 
     [Header(" ----- Playable Rooms ----- ")]
-    [SerializeField] private GameObject m_navMesh;
+    [SerializeField] private NavMeshSurface m_navMesh;
 
     [SerializeField] private GameObject m_portal;
     [SerializeField] private bool m_defeatedAllEnemies;
@@ -28,6 +29,7 @@ public class LevelManager : MonoBehaviour
     public GameObject m_currentRoom;
     private bool m_roomCompleted;
     private int m_currentRoomIndex;
+
 
     private void Start()
     {
@@ -38,7 +40,7 @@ public class LevelManager : MonoBehaviour
     {
         // randomly get some rooms from each type
         //get 3 small rooms
-        for (int i = 0; i < 3; i++)
+        for (int i = 0;m_rooms_playable.Count < 3; i++)
         {
             int _randomNumber = Random.Range(0, m_rooms_small.Length - 1);
 
@@ -46,9 +48,15 @@ public class LevelManager : MonoBehaviour
             {
                 m_rooms_playable.Add(m_rooms_small[_randomNumber]);
             }
+            else
+            {
+                int _newRandomNumber = Random.Range(0, m_rooms_small.Length - 1);
+                if(_newRandomNumber != _randomNumber)
+                    m_rooms_playable.Add(m_rooms_small[_newRandomNumber]);
+            }
         }
         //get 3 medium rooms
-        for (int j = 0; j < 3; j++)
+        for (int j = 0; m_rooms_playable.Count < 6; j++)
         {
             int _randomNumber = Random.Range(0, m_rooms_medium.Length - 1);
 
@@ -56,9 +64,15 @@ public class LevelManager : MonoBehaviour
             {
                 m_rooms_playable.Add(m_rooms_medium[_randomNumber]);
             }
+            else
+            {
+                int _newRandomNumber = Random.Range(0, m_rooms_medium.Length - 1);
+                if (_newRandomNumber != _randomNumber)
+                    m_rooms_playable.Add(m_rooms_medium[_newRandomNumber]);
+            }
         }
         //get 2 large rooms
-        for (int k = 0; k < 2; k++)
+        for (int k = 0; m_rooms_playable.Count < 8; k++)
         {
             int _randomNumber = Random.Range(0, m_rooms_large.Length - 1);
 
@@ -66,12 +80,32 @@ public class LevelManager : MonoBehaviour
             {
                 m_rooms_playable.Add(m_rooms_large[_randomNumber]);
             }
+            else
+            {
+                int _newRandomNumber = Random.Range(0, m_rooms_large.Length - 1);
+                if (_newRandomNumber != _randomNumber)
+                    m_rooms_playable.Add(m_rooms_large[_newRandomNumber]);
+            }
         }
         //get 1 boss room
         m_rooms_playable.Add(m_rooms_boss[Random.Range(0, m_rooms_boss.Length - 1)]);
 
+        GameObject playableRooms = new GameObject("Playable_Rooms");
+        List<GameObject> instantiatedRooms = new List<GameObject>();
+        //Instantiate Playable Rooms
+        for (int i = 0; i < m_rooms_playable.Count; i++)
+        {
+            GameObject room = m_rooms_playable[i];
+            GameObject _room = Instantiate(room, playableRooms.transform);
+            _room.SetActive(false);
+            instantiatedRooms.Add(_room);
+        }
+        m_rooms_playable.Clear();
+        m_rooms_playable = instantiatedRooms;
+
         m_currentRoomIndex = 0;
-        ActivateCurrentRoom(m_rooms_playable, m_currentRoomIndex);
+        m_rooms_playable[m_currentRoomIndex].SetActive(true);
+        ActivateCurrentRoom();
     }
 
     private void Update()
@@ -108,7 +142,7 @@ public class LevelManager : MonoBehaviour
         if (m_currentRoomIndex + 1 < m_rooms_playable.Count)
         {
             m_currentRoomIndex += 1;
-            ActivateCurrentRoom(m_rooms_playable, m_currentRoomIndex);
+            ActivateCurrentRoom();
         }
         else
         {
@@ -118,16 +152,16 @@ public class LevelManager : MonoBehaviour
 
     }
 
-    private void ActivateCurrentRoom(List<GameObject> _rooms_remaining, int _room)
+    private void ActivateCurrentRoom()
     {
         // _room -> the room index you want to activate
 
-        m_currentRoom = _rooms_remaining[_room].gameObject;
+        m_currentRoom = m_rooms_playable[m_currentRoomIndex];
         m_currentRoom.SetActive(true);
 
-        m_navMesh.GetComponent<NavMeshPlus.Components.NavMeshSurface>().BuildNavMeshAsync();
-
         GameManager.I.GetPlayerTransform().position = m_currentRoom.GetComponent<RoomManager>().m_PlayerSpawnPoint.position;
+        
+        m_navMesh.BuildNavMeshAsync();
     }
 
 }

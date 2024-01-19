@@ -44,8 +44,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ede5d25f0229b4ef9a9b1a5a567980ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rooms:
-  - {fileID: 0}
-  - {fileID: 0}
-  _portal: {fileID: 3432831298727695078, guid: 5a34288415e204e4bbad15a6b9b49804, type: 3}
-  _defeatedAllEnemies: 0
+  m_rooms_small:
+  - {fileID: 8811856944227268484, guid: a5717eda1dda74959b28b01551717d5e, type: 3}
+  - {fileID: 1505366814988457501, guid: 9f05f2de02e3d4099b7dede857a6fdb8, type: 3}
+  - {fileID: 6860468129190254654, guid: dd619ddf987c347858886197f862ddb1, type: 3}
+  - {fileID: 8990433710830755182, guid: fe446a030a9f04990a0663e63a5108fa, type: 3}
+  - {fileID: 8990433710830755182, guid: 4c5f5ac8720a049f2a02a9eb71cdcf89, type: 3}
+  - {fileID: 8990433710830755182, guid: edf18875353fd493fab5052ba44dff66, type: 3}
+  m_rooms_medium:
+  - {fileID: 8990433710830755182, guid: 2dc61c180444c49beaa0f2251606dc21, type: 3}
+  - {fileID: 8990433710830755182, guid: 13aa868187fb046719cae938c1a34437, type: 3}
+  - {fileID: 8990433710830755182, guid: 8b6cf23f0ddd04c08bb76cecaa3d8459, type: 3}
+  - {fileID: 8990433710830755182, guid: 4842c40908b6346d2832ce549ece69f6, type: 3}
+  - {fileID: 8990433710830755182, guid: 8dbd87e08309d456e9914f295a91e013, type: 3}
+  - {fileID: 8990433710830755182, guid: f761fc0e51b504261aefd27c3a4370c5, type: 3}
+  m_rooms_large:
+  - {fileID: 8990433710830755182, guid: 0a18f494af0f943fba500655f97be6ec, type: 3}
+  - {fileID: 8990433710830755182, guid: 39f89315787d248138be26b8cbe376bc, type: 3}
+  - {fileID: 8990433710830755182, guid: 5de810c33ee144ee39760e290f41fba2, type: 3}
+  - {fileID: 8990433710830755182, guid: cb4455d5dc914491d859a77edea6a091, type: 3}
+  m_rooms_boss:
+  - {fileID: 8990433710830755182, guid: ccca0753742864dd69953fe68e4ca0c2, type: 3}
+  - {fileID: 8990433710830755182, guid: b6339610f83c7495eae6e60e05dfd3a0, type: 3}
+  m_rooms_playable: []
+  m_navMesh: {fileID: 0}
+  m_portal: {fileID: 3432831298727695078, guid: 5a34288415e204e4bbad15a6b9b49804, type: 3}
+  m_defeatedAllEnemies: 0
+  m_currentRoom: {fileID: 0}
