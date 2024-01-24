@@ -29,6 +29,10 @@ public class Player_Stats : MonoBehaviour
 
     [field: SerializeField] public Player_WeaponManager m_weaponManagerCS;
 
+    public enum FaceDirections { Up, UpRight, Right, DownRight, Down, DownLeft, Left, UpLeft }
+
+    [field: SerializeField] public FaceDirections m_playerFacingDirection;
+
     private void Awake()
     {
         InitializeReferences();

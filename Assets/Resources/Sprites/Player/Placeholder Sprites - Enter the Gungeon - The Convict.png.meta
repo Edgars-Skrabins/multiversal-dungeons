@@ -962,6 +962,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Placeholder Sprites - Enter the Gungeon - The Convict_0
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 791
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 493b3bcd23ec64415871ff26f45d1898
+      internalID: 1569648048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -973,6 +994,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Placeholder Sprites - Enter the Gungeon - The Convict_0: 1569648048
       Placeholder Sprites - Idle Down 0: -305693412
       Placeholder Sprites - Idle Down 1: 1163142298
       Placeholder Sprites - Idle Down 2: -1357438446

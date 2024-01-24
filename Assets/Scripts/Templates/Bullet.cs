@@ -23,7 +23,7 @@ public abstract class Bullet : MonoBehaviour
 
 
     [Space(20)]
-    [SerializeField] protected Rigidbody m_bulletRB;
+    [SerializeField] protected Rigidbody2D m_bulletRB;
     [SerializeField] protected Transform m_bulletTF;
 
     protected virtual void Start()

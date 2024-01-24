@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Player_AnimationController : MonoBehaviour
 {
+    [SerializeField] private Player_Stats m_playerStatsCS;
+
     [SerializeField] private Animator m_playerAnimator;
 
     private void Update()
@@ -22,38 +24,61 @@ public class Player_AnimationController : MonoBehaviour
         float verticalAnimParam = 0f;
 
         // Determine the facing direction based on the angle
-        switch (angle)
+        if (angle >= -22.5f && angle < 22.5f)
         {
-            case >= 0f and <= 45f:
-                // Up Right
-                horizontalAnimParam = 1f;
-                verticalAnimParam = 1f;
-                break;
-            case > 45f and <= 135f:
-                // Up
-                verticalAnimParam = 1f;
-                horizontalAnimParam = 0f;
-                break;
-            case > 135f and <= 180f:
-                // Up Left
-                verticalAnimParam = 1f;
-                horizontalAnimParam = -1f;
-                break;
-            case < 0f and >= -45:
-                // Down Right
-                horizontalAnimParam = 1f;
-                verticalAnimParam = -1f;
-                break;
-            case < -45f and >= -135f:
-                // Down
-                verticalAnimParam = -1f;
-                horizontalAnimParam = 0f;
-                break;
-            case < -135f and >= -180f:
-                // Down Left
-                verticalAnimParam = -1f;
-                horizontalAnimParam = -1f;
-                break;
+            // Right
+            horizontalAnimParam = 1f;
+            verticalAnimParam = 0f;
+            m_playerStatsCS.m_playerFacingDirection = Player_Stats.FaceDirections.Right;
+        }
+        else if (angle >= 22.5f && angle < 67.5f)
+        {
+            // Up Right
+            horizontalAnimParam = 1f;
+            verticalAnimParam = 1f;
+            m_playerStatsCS.m_playerFacingDirection = Player_Stats.FaceDirections.UpRight;
+        }
+        else if (angle >= 67.5f && angle < 112.5f)
+        {
+            // Up
+            horizontalAnimParam = 0f;
+            verticalAnimParam = 1f;
+            m_playerStatsCS.m_playerFacingDirection = Player_Stats.FaceDirections.Up;
+        }
+        else if (angle >= 112.5f && angle < 157.5f)
+        {
+            // Up Left
+            horizontalAnimParam = -1f;
+            verticalAnimParam = 1f;
+            m_playerStatsCS.m_playerFacingDirection = Player_Stats.FaceDirections.DownLeft;
+        }
+        else if ((angle >= 157.5f && angle <= 180f) || (angle >= -180f && angle < -157.5f))
+        {
+            // Left
+            horizontalAnimParam = -1f;
+            verticalAnimParam = 0f;
+            m_playerStatsCS.m_playerFacingDirection = Player_Stats.FaceDirections.Left;
+        }
+        else if (angle >= -157.5f && angle < -112.5f)
+        {
+            // Down Left
+            horizontalAnimParam = -1f;
+            verticalAnimParam = -1f;
+            m_playerStatsCS.m_playerFacingDirection = Player_Stats.FaceDirections.DownLeft;
+        }
+        else if (angle >= -112.5f && angle < -67.5f)
+        {
+            // Down
+            horizontalAnimParam = 0f;
+            verticalAnimParam = -1f;
+            m_playerStatsCS.m_playerFacingDirection = Player_Stats.FaceDirections.Down;
+        }
+        else if (angle >= -67.5f && angle < -22.5f)
+        {
+            // Down Right
+            horizontalAnimParam = 1f;
+            verticalAnimParam = -1f;
+            m_playerStatsCS.m_playerFacingDirection = Player_Stats.FaceDirections.DownRight;
         }
 
         // Update animator parameters for facing direction only

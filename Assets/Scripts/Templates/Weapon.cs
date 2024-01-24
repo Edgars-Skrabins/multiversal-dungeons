@@ -45,7 +45,7 @@ public abstract class Weapon : MonoBehaviour
     {
         if(!m_shotVFX)
         {
-            Debug.LogError("Weapon is missing Shot VFX!");
+            //Debug.LogError("Weapon is missing Shot VFX!");
             return;
         }
         

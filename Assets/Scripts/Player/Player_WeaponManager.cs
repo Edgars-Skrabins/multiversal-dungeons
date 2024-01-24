@@ -4,28 +4,23 @@ using UnityEngine;
 public class Player_WeaponManager : MonoBehaviour
 {
     [Serializable]
-    public class Weapon
+    public class Weapons
     {
         public string m_WeaponName;
 
         public GameObject m_WeaponGO;
     }
 
-    public Weapon[] m_Weapons;
+    public Weapons[] m_Weapons;
 
     [HideInInspector] public string m_currentWeaponName;
 
-     protected void Awake()
-     {
-         //m_currentWeaponName = m_Weapons[0].m_WeaponName;
-         //EquipWeapon(m_currentWeaponName);
-     }
-    
-     public void EquipWeapon(string _weaponName)
+
+    public void EquipWeapon(string _weaponName)
      {
          m_currentWeaponName = _weaponName;
     
-         foreach (var weapon in m_Weapons)
+         foreach (Weapons weapon in m_Weapons)
          {
              if (weapon.m_WeaponName == _weaponName)
              {
@@ -115,5 +110,4 @@ public class Player_WeaponManager : MonoBehaviour
          return m_Weapons[rand].m_WeaponName;
     
      }
-    
 }
