@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
+    [Header(" ----- Managers ----- ")]
+    [SerializeField] private EnemyManager m_enemyManager;
+
     [Header(" ----- Small Rooms ----- ")]
     [SerializeField] private GameObject[] m_rooms_small;
     [Header(" ----- Medium Rooms ----- ")]
@@ -19,16 +22,17 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private List<GameObject> m_rooms_playable = new List<GameObject>();
 
 
-    [Header(" ----- Playable Rooms ----- ")]
+    [Header(" ----- NavMesh ----- ")]
     [SerializeField] private NavMeshSurface m_navMesh;
 
+    [Header(" ----- Level Logic ----- ")]
     [SerializeField] private GameObject m_portal;
     [SerializeField] private bool m_defeatedAllEnemies;
-
-
     public GameObject m_currentRoom;
-    private bool m_roomCompleted;
     private int m_currentRoomIndex;
+    private bool m_roomCompleted;
+
+
 
 
     private void Start()
@@ -162,6 +166,11 @@ public class LevelManager : MonoBehaviour
         GameManager.I.GetPlayerTransform().position = m_currentRoom.GetComponent<RoomManager>().m_PlayerSpawnPoint.position;
         
         m_navMesh.BuildNavMeshAsync();
+
+        if (m_enemyManager)
+        {
+            m_enemyManager.SpawnEnemy(5);
+        }
     }
 
 }

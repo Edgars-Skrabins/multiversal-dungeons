@@ -1,32 +1,44 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
+    [Header(" ----- Managers ----- ")]
+    [SerializeField] private LevelManager m_levelManagerSC;
 
-    [SerializeField] GameObject _enemyType_1;
-    [SerializeField] GameObject _enemyType_2;
-    [SerializeField] GameObject _enemyType_3;
+    [Header(" ----- Enemy Types ----- ")]
+    [SerializeField] private GameObject m_enemyType_1GO;
+    [SerializeField] private GameObject m_enemyType_2GO;
+    [SerializeField] private GameObject m_enemyType_3GO;
 
-    [SerializeField] LevelManager m_levelManager;
-    private RoomManager m_roomManager;
+    private Transform m_SpawnPointTF;
 
-    private void OnEnable()
+    public void SpawnEnemy(int _numberOfEnemies)
     {
 
-        SpawnEnemy();
-        SpawnEnemy();
-        SpawnEnemy();
-    }
+        Transform[] _possibleSpawnPoints = m_levelManagerSC.m_currentRoom.GetComponent<RoomManager>().m_EnemySpawnPoints;
 
-    private void Update()
-    {
+        for (int i = 0; i < _possibleSpawnPoints.Length; i++)
+        {
+            m_SpawnPointTF = _possibleSpawnPoints[i];
+            Instantiate(m_enemyType_1GO, m_SpawnPointTF);
+        }
 
-    }
 
-    private void SpawnEnemy()
-    {
-       // m_roomManager = m_levelManager.m_currentRoom.GetComponent<RoomManager>();
-       // Instantiate(_enemyType_1, m_roomManager.m_EnemySpawnPoints[Random.Range(0, m_roomManager.m_EnemySpawnPoints.Length - 1)]);
+        //Transform[] _possibleSpawnPoints = m_levelManagerSC.m_currentRoom.GetComponent<RoomManager>().m_EnemySpawnPoints;
+        //List<Transform> m_spawnPoint = new List<Transform>();
+
+        //for (int i = 0; i < _numberOfEnemies; i++)
+        //{
+        //    int _randomNumber = Random.Range(0, _possibleSpawnPoints.Length - 1);
+        //    Debug.Log(_randomNumber);
+        //    if (!m_spawnPoint.Contains(_possibleSpawnPoints[_randomNumber]))
+        //    {
+        //        m_SpawnPointTF = _possibleSpawnPoints[_randomNumber];
+        //        m_spawnPoint.Add(_possibleSpawnPoints[_randomNumber]);
+        //        Instantiate(m_enemyType_1GO, m_SpawnPointTF);
+        //    }
+        //}
     }
 
 }
