@@ -28,7 +28,7 @@ public class LevelManager : MonoBehaviour
     [Header(" ----- Level Logic ----- ")]
     [SerializeField] private GameObject m_portal;
     [SerializeField] private bool m_defeatedAllEnemies;
-    public GameObject m_currentRoom;
+    public RoomManager m_currentRoom;
     private int m_currentRoomIndex;
     private bool m_roomCompleted;
 
@@ -135,7 +135,7 @@ public class LevelManager : MonoBehaviour
     public void GoToNextRoom()
     {
         m_roomCompleted = false;
-        m_currentRoom.SetActive(false);
+        m_currentRoom.gameObject.SetActive(false);
 
 
         // check size of current room
@@ -160,16 +160,16 @@ public class LevelManager : MonoBehaviour
     {
         // _room -> the room index you want to activate
 
-        m_currentRoom = m_rooms_playable[m_currentRoomIndex];
-        m_currentRoom.SetActive(true);
+        m_currentRoom = m_rooms_playable[m_currentRoomIndex].GetComponent<RoomManager>();
+        m_currentRoom.gameObject.SetActive(true);
 
-        GameManager.I.GetPlayerTransform().position = m_currentRoom.GetComponent<RoomManager>().m_PlayerSpawnPoint.position;
+        GameManager.I.GetPlayerTransform().position = m_currentRoom.m_PlayerSpawnPoint.position;
         
         m_navMesh.BuildNavMeshAsync();
 
         if (m_enemyManager)
         {
-            m_enemyManager.SpawnEnemy(5);
+            m_enemyManager.SpawnEnemy(4);
         }
     }
 

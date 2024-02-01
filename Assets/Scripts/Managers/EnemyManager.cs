@@ -13,23 +13,36 @@ public class EnemyManager : MonoBehaviour
 
     private Transform m_SpawnPointTF;
 
+
     public void SpawnEnemy(int _numberOfEnemies)
     {
-        Transform[] _possibleSpawnPoints = m_levelManagerSC.m_currentRoom.GetComponent<RoomManager>().m_EnemySpawnPoints;
-        List<Transform> m_spawnPoint = new List<Transform>();
+        List<GameObject> m_levelEnemies = new List<GameObject>();
+        Transform[] possibleSpawnPoints = m_levelManagerSC.m_currentRoom.m_EnemySpawnPoints;
 
         for (int i = 0; i < _numberOfEnemies; i++)
         {
-            int _randomNumber = Random.Range(0, _possibleSpawnPoints.Length - 1);
-            if (!m_spawnPoint.Contains(_possibleSpawnPoints[_randomNumber]))
+            foreach (var tf in possibleSpawnPoints)
             {
-                m_SpawnPointTF = _possibleSpawnPoints[_randomNumber];
-                m_spawnPoint.Add(_possibleSpawnPoints[_randomNumber]);
+                if(m_levelEnemies.Count < _numberOfEnemies)
+                    m_levelEnemies.Add(Instantiate(m_enemyType_1GO, tf));
+            }
+        }
+        /*
+        List<Transform> spawnPoints = new List<Transform>();
+
+        for (int i = 0; i < _numberOfEnemies; i++)
+        {
+            int _randomNumber = Random.Range(0, possibleSpawnPoints.Length - 1);
+            if (!spawnPoints.Contains(possibleSpawnPoints[_randomNumber]))
+            {
+                m_SpawnPointTF = possibleSpawnPoints[_randomNumber];
+                spawnPoints.Add(possibleSpawnPoints[_randomNumber]);
                 Debug.Log(m_SpawnPointTF.name);
                 Debug.Log(m_SpawnPointTF.position);
                 Instantiate(m_enemyType_1GO, m_SpawnPointTF);
             }
         }
+        */
     }
 
 }
