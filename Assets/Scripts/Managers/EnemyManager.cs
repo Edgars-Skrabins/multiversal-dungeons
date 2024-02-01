@@ -21,11 +21,12 @@ public class EnemyManager : MonoBehaviour
         for (int i = 0; i < _numberOfEnemies; i++)
         {
             int _randomNumber = Random.Range(0, _possibleSpawnPoints.Length - 1);
-            Debug.Log(_randomNumber);
             if (!m_spawnPoint.Contains(_possibleSpawnPoints[_randomNumber]))
             {
                 m_SpawnPointTF = _possibleSpawnPoints[_randomNumber];
                 m_spawnPoint.Add(_possibleSpawnPoints[_randomNumber]);
+                Debug.Log(m_SpawnPointTF.name);
+                Debug.Log(m_SpawnPointTF.position);
                 Instantiate(m_enemyType_1GO, m_SpawnPointTF);
             }
         }

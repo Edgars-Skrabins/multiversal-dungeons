@@ -24,7 +24,7 @@ public class Enemy_Movement : MonoBehaviour
 
     private void Update()
     {
-            FollowPlayer();
+        FollowPlayer();
 
         /*
         if (IsPlayerInDetectionRadius(GameManager.I.GetPlayerTransform()) && m_enemyTarget)
@@ -36,7 +36,7 @@ public class Enemy_Movement : MonoBehaviour
 
     private void FollowPlayer()
     {
-        if(IsPlayerInDetectionRadius())
+        if (IsPlayerInDetectionRadius())
         {
             m_enemyAgent.SetDestination(m_enemyTarget.position);
         }
