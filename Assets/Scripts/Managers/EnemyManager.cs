@@ -11,8 +11,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private GameObject m_enemyType_2GO;
     [SerializeField] private GameObject m_enemyType_3GO;
 
-    private Transform m_SpawnPointTF;
-
+    private List<GameObject> m_spawnedEnemies;
 
     public void SpawnEnemy(int _numberOfEnemies)
     {
@@ -27,6 +26,8 @@ public class EnemyManager : MonoBehaviour
                     m_levelEnemies.Add(Instantiate(m_enemyType_1GO, tf));
             }
         }
+
+        m_spawnedEnemies = m_levelEnemies;
         /*
         List<Transform> spawnPoints = new List<Transform>();
 
@@ -45,6 +46,26 @@ public class EnemyManager : MonoBehaviour
         */
     }
 
+    private void LateUpdate()
+    {
+        TrackSpawnedEnemies();
+    }
+
+    private void TrackSpawnedEnemies()
+    {
+        for (int i = 0; i < m_spawnedEnemies.Count; i++)
+        {
+            if (m_spawnedEnemies[i] == null)
+            {
+                m_spawnedEnemies.RemoveAt(i);
+            }
+        }
+    }
+
+    public int GetSpawnedEnemyCount()
+    {
+        return m_spawnedEnemies.Count;
+    }
 }
 
 

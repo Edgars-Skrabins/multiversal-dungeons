@@ -63,11 +63,6 @@ public class AudioManager : Singleton<AudioManager>
         }
     }
 
-    private void Update()
-    {
-        if(Input.GetMouseButtonDown(0)) PlaySound("Shoot");
-    }
-
     public void PlaySound(string _soundName)
     {
         if (GetAudioIfNameValid(_soundName) != null)

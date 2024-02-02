@@ -118,6 +118,8 @@ public class LevelManager : MonoBehaviour
         {
             AfterDefeatAllEnemies();
         }
+
+        m_defeatedAllEnemies = m_enemyManager.GetSpawnedEnemyCount() < 1 ? true : false;
     }
 
     private void AfterDefeatAllEnemies()
@@ -171,6 +173,7 @@ public class LevelManager : MonoBehaviour
         {
             m_enemyManager.SpawnEnemy(4);
         }
+        m_defeatedAllEnemies = false;
     }
 
 }

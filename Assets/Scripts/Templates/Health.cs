@@ -8,6 +8,9 @@ public abstract class Health : MonoBehaviour
     [SerializeField] protected int m_startingHealth;
     [SerializeField] protected int m_currentHealth;
 
+    public virtual int GetMaxHealthValue() { return m_startingHealth; }
+    public virtual int GetCurrentHealthValue() { return m_currentHealth; }
+
     public virtual void TakeDamage(int _damage)
     {
         m_currentHealth -= _damage;
@@ -19,7 +22,7 @@ public abstract class Health : MonoBehaviour
 
     protected virtual void Die()
     {
-
+        Destroy(gameObject);
     }
 
     private void ResetHealth()

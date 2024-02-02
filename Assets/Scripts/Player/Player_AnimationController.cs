@@ -50,7 +50,7 @@ public class Player_AnimationController : MonoBehaviour
             // Up Left
             horizontalAnimParam = -1f;
             verticalAnimParam = 1f;
-            m_playerStatsCS.m_playerFacingDirection = Player_Stats.FaceDirections.DownLeft;
+            m_playerStatsCS.m_playerFacingDirection = Player_Stats.FaceDirections.UpLeft;
         }
         else if ((angle >= 157.5f && angle <= 180f) || (angle >= -180f && angle < -157.5f))
         {

@@ -51,7 +51,7 @@ public abstract class Bullet : MonoBehaviour
 
     protected virtual void LaunchBullet()
     {
-        m_bulletRB.velocity = m_bulletTF.right * m_bulletSpeed;
+        m_bulletRB.velocity = (m_bulletTF.position - InputManager.I.GetWorldMousePosition()) * -m_bulletSpeed;
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D otherCollider)
@@ -71,10 +71,10 @@ public abstract class Bullet : MonoBehaviour
         if (health != null)
         {
             health.TakeDamage(m_bulletDamage);
-            if(_otherCollider.CompareTag("Enemy") && m_doesSlow)
-            {
-                //health.Slow();
-            }
+            //if(_otherCollider.CompareTag("Enemy") && m_doesSlow)
+            //{
+            //    health.Slow();
+            //}
         }
 
         if (m_hasImpactVFX) PlayImpactVFX();
