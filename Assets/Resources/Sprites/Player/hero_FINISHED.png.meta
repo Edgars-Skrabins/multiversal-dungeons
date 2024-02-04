@@ -123,15 +123,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hero_FINISHED_0
+      name: Arm_right
       rect:
         serializedVersion: 2
-        x: 16
-        y: 3
-        width: 18
-        height: 41
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 17
+        y: 18
+        width: 3
+        height: 4
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -139,6 +139,27 @@ TextureImporter:
       bones: []
       spriteID: 50017a39f37de41ae9bf867acf7b900a
       internalID: 1204958180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arm_Left
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 18
+        width: 3
+        height: 5
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b758dffc894864da4b808aac49349410
+      internalID: -2081924201
       vertices: []
       indices: 
       edges: []
@@ -154,7 +175,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      hero_FINISHED_0: 1204958180
+      Arm_Left: -2081924201
+      Arm_right: 1204958180
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

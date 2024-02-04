@@ -171,7 +171,7 @@ public class LevelManager : MonoBehaviour
 
         if (m_enemyManager)
         {
-            m_enemyManager.SpawnEnemy(4);
+            m_enemyManager.SpawnEnemy(0);
         }
         m_defeatedAllEnemies = false;
     }

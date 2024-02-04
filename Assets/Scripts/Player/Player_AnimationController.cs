@@ -6,10 +6,64 @@ public class Player_AnimationController : MonoBehaviour
 
     [SerializeField] private Animator m_playerAnimator;
 
+    [SerializeField] private Transform[] m_playerArmsTF, m_playerGunsTF;
+    [SerializeField] private Transform m_aimTarget;
+    [SerializeField] private float m_armRotationOffset = -45f;
+
     private void Update()
     {
         SetFacingDirection();
         SetSpeed();
+        HandleArmRotation();
+    }
+    private void HandleGunRotation(float _angle)
+    {
+        foreach (Transform gun in m_playerGunsTF)
+        {
+            //gun.LookAt(InputManager.I.GetWorldMousePosition());
+            gun.rotation = Quaternion.Euler(0f, 0f, _angle);
+        }
+    }
+
+    private void SetArmRotation(float _angle)
+    {
+        foreach (Transform arm in m_playerArmsTF)
+        {
+            arm.rotation = Quaternion.Euler(0f, 0f, _angle);
+        }
+    }
+
+    private void HandleArmRotation()
+    {
+        switch (m_playerStatsCS.m_playerFacingDirection)
+        {
+            case Player_Stats.FaceDirections.Up:
+                SetArmRotation(90f + m_armRotationOffset);
+                break;
+            case Player_Stats.FaceDirections.UpRight:
+                SetArmRotation(45f + m_armRotationOffset);
+                break;
+            case Player_Stats.FaceDirections.Right:
+                SetArmRotation(0f + m_armRotationOffset);
+                break;
+            case Player_Stats.FaceDirections.DownRight:
+                SetArmRotation(-45f + m_armRotationOffset);
+                break;
+            case Player_Stats.FaceDirections.Down:
+                SetArmRotation(-90f + m_armRotationOffset);
+                break;
+            case Player_Stats.FaceDirections.DownLeft:
+                SetArmRotation(-135f + m_armRotationOffset);
+                break;
+            case Player_Stats.FaceDirections.Left:
+                SetArmRotation(180f + m_armRotationOffset);
+                break;
+            case Player_Stats.FaceDirections.UpLeft:
+                SetArmRotation(135f + m_armRotationOffset);
+                break;
+            default:
+                break;
+        }
     }
 
     private void SetFacingDirection()
@@ -84,6 +138,8 @@ public class Player_AnimationController : MonoBehaviour
         // Update animator parameters for facing direction only
         m_playerAnimator.SetFloat("Horizontal", horizontalAnimParam);
         m_playerAnimator.SetFloat("Vertical", verticalAnimParam);
+
+        HandleGunRotation(angle + m_armRotationOffset);
     }
 
     private void SetSpeed()
