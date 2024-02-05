@@ -197,7 +197,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3650742737830756524}
   - component: {fileID: 6591434221559570912}
-  - component: {fileID: 3472807833871598306}
   m_Layer: 3
   m_Name: Arm_L
   m_TagString: Untagged
@@ -273,18 +272,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3472807833871598306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1010052777339962284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf9d5542ed2d846cbad138d63c356473, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1513753487426256023
 GameObject:
   m_ObjectHideFlags: 0
@@ -806,6 +793,7 @@ GameObject:
   - component: {fileID: 3118045796071191132}
   - component: {fileID: 1987943846149638709}
   - component: {fileID: 4062167146436348410}
+  - component: {fileID: 7230332372477825629}
   m_Layer: 0
   m_Name: Magic Staff
   m_TagString: Untagged
@@ -902,6 +890,28 @@ MonoBehaviour:
   - {fileID: 7089257213183646320}
   m_bulletProjectilePrefabs:
   - {fileID: 8841462916365695426, guid: 7f2e255ba296045f4bb4bb5467b66023, type: 3}
+--- !u!114 &7230332372477825629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4494643074599036781}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22375916b26d14326af45bd0b052d3f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_stats: {fileID: 8054692651505727567}
+  m_spriteRenderer: {fileID: 1987943846149638709}
+  m_upSprite: {fileID: 1525230883, guid: 4c8eaa55a661a490194d882fe2da6f0f, type: 3}
+  m_upRightSprite: {fileID: -486641664, guid: 4c8eaa55a661a490194d882fe2da6f0f, type: 3}
+  m_upLeftSprite: {fileID: -1491396376, guid: 4c8eaa55a661a490194d882fe2da6f0f, type: 3}
+  m_downSprite: {fileID: -1174114318, guid: 4c8eaa55a661a490194d882fe2da6f0f, type: 3}
+  m_downRightSprite: {fileID: 946376175, guid: 4c8eaa55a661a490194d882fe2da6f0f, type: 3}
+  m_downLeftSprite: {fileID: 928307477, guid: 4c8eaa55a661a490194d882fe2da6f0f, type: 3}
+  m_rightSprite: {fileID: -417140144, guid: 4c8eaa55a661a490194d882fe2da6f0f, type: 3}
+  m_leftSprite: {fileID: 1386782090, guid: 4c8eaa55a661a490194d882fe2da6f0f, type: 3}
 --- !u!1 &4637453872463383039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1213,7 +1223,7 @@ Transform:
   m_GameObject: {fileID: 7902602489526639466}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.041, y: -0.137, z: 0}
+  m_LocalPosition: {x: 0.041, y: -0.004, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1305,7 +1315,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4646194088463160131}
   - component: {fileID: 813381553438150989}
-  - component: {fileID: 5181288612694387741}
   m_Layer: 3
   m_Name: Arm_R
   m_TagString: Untagged
@@ -1381,18 +1390,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5181288612694387741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8595858387957555760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf9d5542ed2d846cbad138d63c356473, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8705688402533886784
 GameObject:
   m_ObjectHideFlags: 0
@@ -1408,7 +1405,6 @@ GameObject:
   - component: {fileID: 6317546940303301528}
   - component: {fileID: 2244271748087315884}
   - component: {fileID: 7328467997244260316}
-  - component: {fileID: 7999033165188075879}
   - component: {fileID: 1996558838294673692}
   - component: {fileID: 2332071915782367805}
   - component: {fileID: 798317709502443158}
@@ -1547,28 +1543,6 @@ MonoBehaviour:
   - m_WeaponName: Magic Staff
     m_WeaponGO: {fileID: 4494643074599036781}
   m_currentWeaponName: 
---- !u!114 &7999033165188075879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8705688402533886784}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65cfcc310ed4543afb6fc90a9b6681e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_playerStatsCS: {fileID: 8054692651505727567}
-  m_playerHandTF: {fileID: 0}
-  m_handPositionUp: {x: 0, y: 1}
-  m_handPositionUpRight: {x: 0.75, y: 0.75}
-  m_handPositionRight: {x: 1, y: 0}
-  m_handPositionDownRight: {x: 0.75, y: -0.75}
-  m_handPositionDown: {x: 0, y: -1}
-  m_handPositionDownLeft: {x: -0.75, y: -0.75}
-  m_handPositionLeft: {x: -1, y: 0}
-  m_handPositionUpLeft: {x: -0.75, y: 0.75}
 --- !u!114 &1996558838294673692
 MonoBehaviour:
   m_ObjectHideFlags: 0

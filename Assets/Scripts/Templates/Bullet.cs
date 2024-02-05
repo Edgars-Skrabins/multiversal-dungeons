@@ -56,12 +56,14 @@ public abstract class Bullet : MonoBehaviour
 
     protected virtual void OnTriggerEnter2D(Collider2D otherCollider)
     {
-        Impact(otherCollider);
+        if(!otherCollider.CompareTag("Player_Collider"))
+            Impact(otherCollider);
     }
 
     protected void OnCollisionEnter2D(Collision2D collision)
     {
-        Impact(collision.collider);
+        if(!collision.collider.CompareTag("Player_Collider"))
+            Impact(collision.collider);
     }
 
     protected virtual void Impact(Collider2D _otherCollider)

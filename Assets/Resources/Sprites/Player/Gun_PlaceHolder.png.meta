@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Gun_PlaceHolder_0
+      name: Gun_PlaceHolder_0 right
       rect:
         serializedVersion: 2
         x: 4
@@ -144,7 +144,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gun_PlaceHolder_1
+      name: Gun_PlaceHolder_1 left
       rect:
         serializedVersion: 2
         x: 19
@@ -165,7 +165,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gun_PlaceHolder_2
+      name: Gun_PlaceHolder_2 up
       rect:
         serializedVersion: 2
         x: 37
@@ -186,7 +186,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gun_PlaceHolder_3
+      name: Gun_PlaceHolder_3 down
       rect:
         serializedVersion: 2
         x: 54
@@ -207,7 +207,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gun_PlaceHolder_4
+      name: Gun_PlaceHolder_4 up right
       rect:
         serializedVersion: 2
         x: 4
@@ -228,7 +228,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gun_PlaceHolder_5
+      name: Gun_PlaceHolder_5 up left
       rect:
         serializedVersion: 2
         x: 20
@@ -249,7 +249,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gun_PlaceHolder_6
+      name: Gun_PlaceHolder_6 down right
       rect:
         serializedVersion: 2
         x: 36
@@ -270,7 +270,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gun_PlaceHolder_7
+      name: Gun_PlaceHolder_7 down left
       rect:
         serializedVersion: 2
         x: 52
@@ -301,14 +301,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Gun_PlaceHolder_0: -417140144
-      Gun_PlaceHolder_1: 1386782090
-      Gun_PlaceHolder_2: 1525230883
-      Gun_PlaceHolder_3: -1174114318
-      Gun_PlaceHolder_4: -486641664
-      Gun_PlaceHolder_5: -1491396376
-      Gun_PlaceHolder_6: 946376175
-      Gun_PlaceHolder_7: 928307477
+      Gun_PlaceHolder_0 right: -417140144
+      Gun_PlaceHolder_1 left: 1386782090
+      Gun_PlaceHolder_2 up: 1525230883
+      Gun_PlaceHolder_3 down: -1174114318
+      Gun_PlaceHolder_4 up right: -486641664
+      Gun_PlaceHolder_5 up left: -1491396376
+      Gun_PlaceHolder_6 down right: 946376175
+      Gun_PlaceHolder_7 down left: 928307477
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
