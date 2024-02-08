@@ -171,7 +171,8 @@ public class LevelManager : MonoBehaviour
 
         if (m_enemyManager)
         {
-            m_enemyManager.SpawnEnemy(0);
+            //spawn max amount of enemies for that room
+            m_enemyManager.SpawnInitialEnemy();
         }
         m_defeatedAllEnemies = false;
     }

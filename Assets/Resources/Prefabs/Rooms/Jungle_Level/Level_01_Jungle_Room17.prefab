@@ -14113,3 +14113,4 @@ MonoBehaviour:
   m_EnemySpawnPoints:
   - {fileID: 4876466458020549466}
   m_roomType: 0
+  m_MaxEnemies: 10

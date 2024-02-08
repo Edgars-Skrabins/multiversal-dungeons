@@ -9053,3 +9053,4 @@ MonoBehaviour:
   - {fileID: 2037157332160470454}
   - {fileID: 7153734076344477896}
   m_roomType: 0
+  m_MaxEnemies: 10

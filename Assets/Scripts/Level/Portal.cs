@@ -19,12 +19,12 @@ public class Portal : MonoBehaviour, IInteractable
 
     public void InteractGFXOn()
     {
-        Debug.Log("interact portal GFX On");
+        //Debug.Log("interact portal GFX On");
     }
 
     public void InteractGFXOff()
     {
-        Debug.Log("interact portal GFX Off");
+        //Debug.Log("interact portal GFX Off");
     }
 
 }

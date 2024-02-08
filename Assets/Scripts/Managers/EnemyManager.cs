@@ -11,60 +11,63 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private GameObject m_enemyType_2GO;
     [SerializeField] private GameObject m_enemyType_3GO;
 
-    private List<GameObject> m_spawnedEnemies;
+    private List<GameObject> m_currentSpawnedEnemies;
+    private int m_spawnedEnemies;
 
-    public void SpawnEnemy(int _numberOfEnemies)
+    public void SpawnInitialEnemy()
     {
+        m_spawnedEnemies = 0;
         List<GameObject> m_levelEnemies = new List<GameObject>();
         Transform[] possibleSpawnPoints = m_levelManagerSC.m_currentRoom.m_EnemySpawnPoints;
+        int maxEnemiesAtATime = possibleSpawnPoints.Length;
 
-        for (int i = 0; i < _numberOfEnemies; i++)
+        for (int i = 0; i < maxEnemiesAtATime; i++)
         {
             foreach (var tf in possibleSpawnPoints)
             {
-                if(m_levelEnemies.Count < _numberOfEnemies)
+                if (m_levelEnemies.Count < maxEnemiesAtATime)
+                {
+                    m_spawnedEnemies++;
                     m_levelEnemies.Add(Instantiate(m_enemyType_1GO, tf));
+                }
             }
         }
 
-        m_spawnedEnemies = m_levelEnemies;
-        /*
-        List<Transform> spawnPoints = new List<Transform>();
+        m_currentSpawnedEnemies = m_levelEnemies;
+    }
 
-        for (int i = 0; i < _numberOfEnemies; i++)
+    private void AddEnemy()
+    {
+        Transform[] possibleSpawnPoints = m_levelManagerSC.m_currentRoom.m_EnemySpawnPoints;
+        int maxEnemiesAtATime = possibleSpawnPoints.Length;
+        if (m_currentSpawnedEnemies.Count < maxEnemiesAtATime && m_spawnedEnemies < m_levelManagerSC.m_currentRoom.m_MaxEnemies)
         {
-            int _randomNumber = Random.Range(0, possibleSpawnPoints.Length - 1);
-            if (!spawnPoints.Contains(possibleSpawnPoints[_randomNumber]))
-            {
-                m_SpawnPointTF = possibleSpawnPoints[_randomNumber];
-                spawnPoints.Add(possibleSpawnPoints[_randomNumber]);
-                Debug.Log(m_SpawnPointTF.name);
-                Debug.Log(m_SpawnPointTF.position);
-                Instantiate(m_enemyType_1GO, m_SpawnPointTF);
-            }
+            m_spawnedEnemies++;
+            int randomTFIndex = Random.Range(0, possibleSpawnPoints.Length);
+            m_currentSpawnedEnemies.Add(Instantiate(m_enemyType_1GO, possibleSpawnPoints[randomTFIndex]));
         }
-        */
     }
 
     private void LateUpdate()
     {
         TrackSpawnedEnemies();
+        AddEnemy();
     }
 
     private void TrackSpawnedEnemies()
     {
-        for (int i = 0; i < m_spawnedEnemies.Count; i++)
+        for (int i = 0; i < m_currentSpawnedEnemies.Count; i++)
         {
-            if (m_spawnedEnemies[i] == null)
+            if (m_currentSpawnedEnemies[i] == null)
             {
-                m_spawnedEnemies.RemoveAt(i);
+                m_currentSpawnedEnemies.RemoveAt(i);
             }
         }
     }
 
     public int GetSpawnedEnemyCount()
     {
-        return m_spawnedEnemies.Count;
+        return m_currentSpawnedEnemies.Count;
     }
 }
 
