@@ -54,12 +54,6 @@ public abstract class Bullet : MonoBehaviour
         m_bulletRB.velocity = (m_bulletTF.position - InputManager.I.GetWorldMousePosition()) * -m_bulletSpeed;
     }
 
-    protected virtual void OnTriggerEnter2D(Collider2D otherCollider)
-    {
-        if(!otherCollider.CompareTag("Player_Collider"))
-            Impact(otherCollider);
-    }
-
     protected void OnCollisionEnter2D(Collision2D collision)
     {
         if(!collision.collider.CompareTag("Player_Collider"))
